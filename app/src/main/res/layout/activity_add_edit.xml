@@ -1,77 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
-    <!-- Recipe Title Input -->
-    <EditText
-        android:id="@+id/recipeTitleEditText"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Recipe Title"
-        android:textSize="18sp"
-        android:inputType="textCapWords"
-        android:layout_marginTop="16dp"/>
-    <!--  Category Dropdown  -->
-    <Spinner
-        android:id="@+id/categorySpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
+        android:layout_height="match_parent">
 
-    <!--  Recipe Description Input  -->
-    <EditText
-        android:id="@+id/descriptionEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Description"
-        android:textSize="18sp"
-        android:inputType="textMultiLine"
-        android:layout_marginTop="16dp"/>
+        <LinearLayout
+            android:id="@+id/recipeFormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <!--  Ingredients Input  -->
-    <EditText
-        android:id="@+id/ingredientsEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ingredients"
-        android:textSize="18sp"
-        android:inputType="textMultiLine"
-        android:layout_marginTop="16dp"/>
+            <!-- Recipe Title Input -->
+            <EditText
+                android:id="@+id/recipeTitleEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Recipe Title"
+                android:textSize="18sp"
+                android:inputType="textCapWords"
+                android:layout_marginTop="16dp"/>
+            <!--  Category Dropdown  -->
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
 
-    <!--  Instructions Input  -->
-    <EditText
-        android:id="@+id/instructionsEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Instructions"
-        android:textSize="18sp"
-        android:inputType="textMultiLine"
-        android:layout_marginTop="16dp"/>
+            <!--  Recipe Description Input  -->
+            <EditText
+                android:id="@+id/descriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:textSize="18sp"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="16dp"/>
 
-    <!--  Buttons for cancelling, saving, deleting -->
-    <Button
-        android:id="@+id/cancelButton"
-        android:text="Cancel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"/>
+            <!--  Ingredients Input  -->
+            <EditText
+                android:id="@+id/ingredientsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingredients"
+                android:textSize="18sp"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="16dp"/>
 
-    <Button
-        android:id="@+id/saveButton"
-        android:text="Save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"/>
+            <!--  Instructions Input  -->
+            <EditText
+                android:id="@+id/instructionsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Instructions"
+                android:textSize="18sp"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="16dp"/>
 
-    <Button
-        android:id="@+id/deleteButton"
-        android:text="Delete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"/>
+            <!--  Buttons for cancelling, saving, deleting -->
+            <Button
+                android:id="@+id/cancelButton"
+                android:text="Cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"/>
 
+            <Button
+                android:id="@+id/saveButton"
+                android:text="Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"/>
 
+            <Button
+                android:id="@+id/deleteButton"
+                android:text="Delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"/>
 
-</LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
