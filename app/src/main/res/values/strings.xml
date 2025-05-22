@@ -6,6 +6,11 @@
     <string name="back">Back</string>
     <string name="save">Save</string>
     <string name="more_options">⋮</string>
+    <string name="title_label">Title</string>
+    <string name="select_category_label">Category</string>
+    <string name="description_label">Description</string>
+    <string name="ingredients_label">Ingredients</string>
+    <string name="instructions_label">Instructions</string>
     <string name="recipe_title_hint">Recipe Title</string>
     <string name="description_hint">Description</string>
     <string name="ingredients_hint">Ingredient</string>

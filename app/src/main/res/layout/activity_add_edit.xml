@@ -56,7 +56,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title"
+            android:text="@string/title_label"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp" />
@@ -74,7 +74,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Category"
+            android:text="@string/select_category_label"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
@@ -90,7 +90,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recipe Description"
+            android:text="@string/description_label"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
@@ -109,7 +109,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingredients"
+            android:text="@string/ingredients_label"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
@@ -148,7 +148,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Instructions"
+            android:text="@string/instructions_label"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
