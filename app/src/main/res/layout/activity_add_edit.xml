@@ -112,7 +112,7 @@
             android:text="Ingredients"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="16dp"/>
 
         <EditText
             android:id="@+id/ingredientsEditText1"
@@ -151,7 +151,7 @@
             android:text="Instructions"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="16dp"/>
 
         <EditText
             android:id="@+id/instructionsEditText"
