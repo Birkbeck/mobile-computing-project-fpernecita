@@ -143,6 +143,13 @@
             android:gravity="top"
             android:layout_marginTop="16dp"/>
 
+        <!-- Add More Button -->
+        <Button
+            android:id="@+id/addMoreIngredientsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add More"/>
+
         <!--  Instructions Input  -->
         <TextView
             android:layout_width="wrap_content"
