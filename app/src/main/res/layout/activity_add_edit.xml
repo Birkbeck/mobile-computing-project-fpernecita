@@ -106,6 +106,14 @@
             android:layout_marginTop="16dp"/>
 
         <!--  Ingredients Input  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingredients"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+
         <EditText
             android:id="@+id/ingredientsEditText"
             android:layout_width="match_parent"
