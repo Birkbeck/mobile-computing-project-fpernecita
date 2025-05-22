@@ -85,6 +85,38 @@
         <include layout="@layout/recipe_item" />
         </GridLayout>
 
+        <!-- CATEGORY 2  -->
+        <include layout="@layout/category_section" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp">
+            <!-- Recipe Grid -->
+            <include layout="@layout/recipe_item" />
+            <include layout="@layout/recipe_item" />
+            <include layout="@layout/recipe_item" />
+            <include layout="@layout/recipe_item" />
+        </GridLayout>
+
+        <!-- CATEGORY 2  -->
+        <include layout="@layout/category_section" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp">
+            <!-- Recipe Grid -->
+            <include layout="@layout/recipe_item" />
+            <include layout="@layout/recipe_item" />
+            <include layout="@layout/recipe_item" />
+            <include layout="@layout/recipe_item" />
+        </GridLayout>
+
     </LinearLayout>
 
 </ScrollView>
