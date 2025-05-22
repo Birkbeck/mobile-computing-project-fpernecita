@@ -12,4 +12,20 @@
         android:id="@+id/categoryDropdown"
         />
 
+    <!--  Recipe Description Input  -->
+    <EditText
+        android:id="@+id/descriptionEditText"
+        />
+
+    <!--  Ingredients Input  -->
+    <EditText
+        android:id="@+id/ingredientsEditText"
+        />
+
+    <!--  Instructions Input  -->
+    <EditText
+        android:id="@+id/instructionsEditText"
+        />
+
+
 </LinearLayout>
