@@ -27,5 +27,22 @@
         android:id="@+id/instructionsEditText"
         />
 
+    <!--  Buttons for cancelling, saving, deleting -->
+    <Button
+        android:id="@+id/cancelButton"
+        android:text="Cancel"
+        />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:text="Save"
+        />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:text="Delete"
+        />
+
+
 
 </LinearLayout>
