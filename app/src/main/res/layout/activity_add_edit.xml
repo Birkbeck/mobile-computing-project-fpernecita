@@ -20,6 +20,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <ConstraintLayout>
+
+            </ConstraintLayout>
+
             <!-- Recipe Title Input -->
             <EditText
                 android:id="@+id/recipeTitleEditText"
