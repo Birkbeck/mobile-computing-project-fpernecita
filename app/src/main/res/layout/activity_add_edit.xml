@@ -20,13 +20,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/iconsContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp">
 
-            </ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!-- Recipe Title Input -->
             <EditText
