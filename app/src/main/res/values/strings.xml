@@ -2,4 +2,5 @@
     <string name="app_name">CulinaryCompanion_FrancisPernecita</string>
     <string name="app_title">Culinary Companion</string>
     <string name="recipe_name_text_view">Recipe Name</string>
+    <string name="recipe_category_text_view">Recipe Category</string>
 </resources>
