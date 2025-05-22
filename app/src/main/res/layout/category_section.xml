@@ -13,6 +13,11 @@
         android:scaleType="centerCrop"
         android:background="@color/light_blue"/>
 
+    <View
+        android:background="#30000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <TextView
         android:id="@+id/categoryTitleTextView"
         android:layout_width="match_parent"
@@ -23,7 +28,6 @@
         android:text="@string/recipe_category_text_view"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:background="#66000000"/>/>
+        android:textColor="@color/black"/>
 
 </FrameLayout>
