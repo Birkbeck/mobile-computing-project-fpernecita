@@ -44,6 +44,7 @@
                 android:hint="Description"
                 android:textSize="18sp"
                 android:inputType="textMultiLine"
+                android:gravity="top"
                 android:layout_marginTop="16dp"/>
 
             <!--  Ingredients Input  -->
@@ -54,6 +55,7 @@
                 android:hint="Ingredients"
                 android:textSize="18sp"
                 android:inputType="textMultiLine"
+                android:gravity="top"
                 android:layout_marginTop="16dp"/>
 
             <!--  Instructions Input  -->
@@ -64,6 +66,7 @@
                 android:hint="Instructions"
                 android:textSize="18sp"
                 android:inputType="textMultiLine"
+                android:gravity="top"
                 android:layout_marginTop="16dp"/>
 
             <!--  Buttons for cancelling, saving, deleting -->
