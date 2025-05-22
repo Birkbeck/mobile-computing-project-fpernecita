@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:hint="Ingredients"
         android:textSize="18sp"
-        android:inputType="textMultiLinevbggb"
+        android:inputType="textMultiLine"
         android:layout_marginTop="16dp"/>
 
     <!--  Instructions Input  -->
