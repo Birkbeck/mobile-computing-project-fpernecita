@@ -9,22 +9,25 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/appTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Culinary Companion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 <!-- Recycler View for the recipe list -->
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/datarv"
         android:layout_width="match_parent"
         android:layout_height="patch_parent"
-        android:id="@+id/datarv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
