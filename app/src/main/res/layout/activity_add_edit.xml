@@ -26,6 +26,15 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp">
 
+                <!-- Back Button to b changed to a back arrow action button-->
+                <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!-- Recipe Title Input -->
