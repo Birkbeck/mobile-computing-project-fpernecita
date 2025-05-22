@@ -148,7 +148,7 @@
             android:id="@+id/addMoreIngredientsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add More"/>
+            android:text="@string/add_more""/>
 
         <!--  Instructions Input  -->
         <TextView
