@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:hint="Recipe Title"
         android:textSize="18sp"
-        android:inputType="text"
+        android:inputType="textCapWords"
         android:layout_marginTop="16dp"/>
     <!--  Category Dropdown  -->
     <Spinner
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:hint="Description"
         android:textSize="18sp"
-        android:inputType="text"
+        android:inputType="textMultiLine"
         android:layout_marginTop="16dp"/>
 
     <!--  Ingredients Input  -->
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:hint="Ingredients"
         android:textSize="18sp"
-        android:inputType="text"
+        android:inputType="textMultiLinevbggb"
         android:layout_marginTop="16dp"/>
 
     <!--  Instructions Input  -->
