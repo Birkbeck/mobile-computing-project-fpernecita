@@ -8,4 +8,8 @@
         android:id="@+id/recipeTitleEditText"
         />
 
+    <EditText
+        android:id="@+id/categoryDropdown"
+        />
+
 </LinearLayout>
