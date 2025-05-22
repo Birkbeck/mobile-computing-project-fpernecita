@@ -54,17 +54,23 @@
     <Button
         android:id="@+id/cancelButton"
         android:text="Cancel"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"/>
 
     <Button
         android:id="@+id/saveButton"
         android:text="Save"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"/>
 
     <Button
         android:id="@+id/deleteButton"
         android:text="Delete"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"/>
 
 
 
