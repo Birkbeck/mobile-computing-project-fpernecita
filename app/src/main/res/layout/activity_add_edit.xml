@@ -15,8 +15,10 @@
         android:layout_marginTop="16dp"/>
     <!--  Category Dropdown  -->
     <Spinner
-        android:id="@+id/categoryDropdown"
-        />
+        android:id="@+id/categorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
 
     <!--  Recipe Description Input  -->
     <EditText
