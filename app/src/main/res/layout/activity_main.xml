@@ -65,7 +65,8 @@
             android:layout_height="wrap_content"
             android:text="@string/app_title"
             android:textSize="24sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_margin="8dp"/>
 
         <!-- CATEGORY 1 -->
         <include layout="@layout/category_section" />
