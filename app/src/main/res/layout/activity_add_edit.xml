@@ -31,7 +31,7 @@
                     android:id="@+id/backButton"
                     android:layout_width="80dp"
                     android:layout_height="48dp"
-                    android:text="Back"
+                    android:text="@string/back"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,7 +51,7 @@
                     android:id="@+id/saveButton"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
-                    android:text="Save"
+                    android:text="@string/save"
                     app:layout_constraintEnd_toStartOf="@id/optionsButton"
                     app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginEnd="8dp"/>
@@ -63,7 +63,7 @@
                 android:id="@+id/recipeTitleEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Recipe Title"
+                android:hint="@string/recipe_title_hint"
                 android:textSize="18sp"
                 android:inputType="textCapWords"
                 android:layout_marginTop="16dp"/>
@@ -80,7 +80,7 @@
                 android:id="@+id/descriptionEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Description"
+                android:hint="@string/description_hint"
                 android:textSize="18sp"
                 android:inputType="textMultiLine"
                 android:gravity="top"
@@ -91,7 +91,7 @@
                 android:id="@+id/ingredientsEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ingredients"
+                android:hint="@string/ingredients_hint"
                 android:textSize="18sp"
                 android:inputType="textMultiLine"
                 android:gravity="top"
@@ -102,7 +102,7 @@
                 android:id="@+id/instructionsEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Instructions"
+                android:hint="@string/instructions_hint"
                 android:textSize="18sp"
                 android:inputType="textMultiLine"
                 android:gravity="top"
