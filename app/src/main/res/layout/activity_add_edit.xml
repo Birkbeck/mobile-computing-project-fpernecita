@@ -29,12 +29,11 @@
                 <!-- Back Button to b changed to a back arrow action button-->
                 <Button
                     android:id="@+id/backButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80"
+                    android:layout_height="60dp"
                     android:text="Back"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
 
                 <!-- Options/Three dots vertical button (⋮ as text) -->
                 <Button
@@ -47,6 +46,17 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginEnd="8dp" />
+
+                <!-- Save Button -->
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="Save"
+                    app:layout_constraintEnd_toStartOf="@id/optionsButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!-- Recipe Title Input -->
@@ -63,7 +73,8 @@
                 android:id="@+id/categorySpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp"
+                />
 
             <!--  Recipe Description Input  -->
             <EditText
