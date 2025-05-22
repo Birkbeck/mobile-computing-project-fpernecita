@@ -23,6 +23,7 @@
         android:text="@string/recipe_category_text_view"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:background="#66000000"/>/>
 
 </FrameLayout>
