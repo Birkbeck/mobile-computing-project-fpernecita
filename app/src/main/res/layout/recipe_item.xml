@@ -15,6 +15,16 @@
         android:src="@drawable/category_image"
         android:layout_marginEnd="12dp"/>
 
+    <!-- text box for the recipe title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/recipeNameTextView"
+        android:text="Recipe Name"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+
 
 
 
