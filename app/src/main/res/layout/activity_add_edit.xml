@@ -3,10 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <!-- Recipe Title Input -->
     <EditText
         android:id="@+id/recipeTitleEditText"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Recipe Title"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:layout_marginTop="16dp"/>
     <!--  Category Dropdown  -->
     <Spinner
         android:id="@+id/categoryDropdown"
@@ -15,17 +21,32 @@
     <!--  Recipe Description Input  -->
     <EditText
         android:id="@+id/descriptionEditText"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:layout_marginTop="16dp"/>
 
     <!--  Ingredients Input  -->
     <EditText
         android:id="@+id/ingredientsEditText"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingredients"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:layout_marginTop="16dp"/>
 
     <!--  Instructions Input  -->
     <EditText
         android:id="@+id/instructionsEditText"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Instructions"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:layout_marginTop="16dp"/>
 
     <!--  Buttons for cancelling, saving, deleting -->
     <Button
