@@ -30,7 +30,7 @@
                 <Button
                     android:id="@+id/backButton"
                     android:layout_width="80"
-                    android:layout_height="60dp"
+                    android:layout_height="48dp"
                     android:text="Back"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -38,10 +38,9 @@
                 <!-- Options/Three dots vertical button (⋮ as text) -->
                 <Button
                     android:id="@+id/optionsButton"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
                     android:text="⋮"
-                    android:textSize="30sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -51,7 +50,7 @@
                 <Button
                     android:id="@+id/saveButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="60dp"
+                    android:layout_height="48dp"
                     android:text="Save"
                     app:layout_constraintEnd_toStartOf="@id/optionsButton"
                     app:layout_constraintTop_toTopOf="parent"
