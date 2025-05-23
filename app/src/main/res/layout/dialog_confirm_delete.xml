@@ -50,6 +50,7 @@
         <!--  Confirm Button  -->
         <Button
             android:id="@+id/confirmDeleteButton"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/confirm"
@@ -59,6 +60,7 @@
         <!--  Cancel Button  -->
         <Button
             android:id="@+id/cancelDeleteButton"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/cancel"
