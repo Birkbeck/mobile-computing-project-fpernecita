@@ -78,6 +78,22 @@
             <include layout="@layout/category_section" />
             <include layout="@layout/recipe_item"/>
 
+            <!-- CATEGORY 2 -->
+            <include layout="@layout/category_section" />
+            <include layout="@layout/recipe_item"/>
+
+            <!-- CATEGORY 3 -->
+            <include layout="@layout/category_section" />
+            <include layout="@layout/recipe_item"/>
+
+            <!-- CATEGORY 4 -->
+            <include layout="@layout/category_section" />
+            <include layout="@layout/recipe_item"/>
+
+            <!-- CATEGORY 5 -->
+            <include layout="@layout/category_section" />
+            <include layout="@layout/recipe_item"/>
+
         </LinearLayout>
     </ScrollView>
 
