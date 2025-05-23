@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:text="Delete Recipe?"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
 
     <!--  Dialog message  -->
     <TextView
@@ -22,7 +23,8 @@
         android:layout_height="wrap_content"
         android:text="Are you sure you want to delete this recipe?"
         android:textSize="16sp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
 
     <!--  Buttons setup  -->
     <LinearLayout
