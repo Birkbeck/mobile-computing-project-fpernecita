@@ -24,11 +24,12 @@
     <string name="ingredients_hint">Ingredient</string>
     <string name="instructions_hint">Instructions</string>
 
+    <string name="description_text_view">Great recipe for breakfast that can be topped with, blueberries, cream and bacon </string>"
     <string name="ingredients_header">Ingredients:</string>
+    <string name="ingredient1">- Ingredient</string>
+
     <string name="instructions_header">Instructions:</string>
     <string name="instructions_placeholder1">Step 1\nWeigh out and tip the flour, baking powder and sugar into a large bowl with a small pinch of salt. Crack in the eggs and whisk until smooth. Add the milk while whisking.</string>
     <string name="instructions_placeholder2">Step 2\nHeat a splash of oil and a small knob of butter in a non-stick frying pan until sizzling. Add spoonfuls of batter to make pancakes at the desired sized.</string>
     <string name="instructions_placeholder3">Step 3\nCook until bubbles start to form on the surface, then flip and cook the other side. Eat straight away or keep warm in a low oven while you cook another batch. Serve pancakes with pancetta or blueberries, drizzled with extra maple syrup.</string>
-
-    <string name="description_text_view">Great recipe for breakfast that can be topped with, blueberries, cream and bacon </string>"
 </resources>

@@ -97,14 +97,23 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginTop="24dp"/>
-            <!-- use '\n[#]' for multiline text view for ingredients   -->
+
             <TextView
                 android:id="@+id/ingredientsTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="- 300g self-raising flour\n- 1 tbsp baking powder\n- 1 tbsp caster sugar\n- 2 medium eggs\n- 300ml milk"
+                android:text="@string/ingredient1"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp"/>
+
+
+            <TextView
+                android:id="@+id/ingredientsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredient1"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
 
             <!-- Instruction header and text -->
             <TextView
@@ -128,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/instructions_placeholder2"
                 android:textSize="16sp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="4dp"/>
 
             <TextView
                 android:id="@+id/instructionsTextView3"
@@ -136,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/instructions_placeholder3"
                 android:textSize="16sp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
