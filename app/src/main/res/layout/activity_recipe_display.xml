@@ -39,7 +39,7 @@
             android:id="@+id/editButton"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:text="Edit"
+            android:text="@string/edit"
             app:layout_constraintEnd_toStartOf="@id/optionsButton"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginEnd="8dp"/>
