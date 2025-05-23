@@ -88,7 +88,13 @@
     <TextView/>
 
     <!-- Instruction header and text -->
-    <TextView/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instructions"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
 
     <TextView/>
 
