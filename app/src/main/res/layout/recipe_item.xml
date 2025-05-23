@@ -55,7 +55,6 @@
         android:textStyle="bold"
         android:gravity="center"
         android:padding="8dp"
-        android:maxLines="2"
-        android:ellipsize="end"/>
+        android:maxLines="2"/>
 
 </GridLayout>
