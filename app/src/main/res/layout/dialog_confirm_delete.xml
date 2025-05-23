@@ -19,5 +19,15 @@
         android:orientation="horizontal"
         android:gravity="center">
 
+        <!--  Confirm Button  -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+        <!--  Cancel Button  -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
 
 </LinearLayout>
