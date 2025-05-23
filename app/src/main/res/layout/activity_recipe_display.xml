@@ -14,6 +14,15 @@
         android:layout_height="wrap_content"
         android:paddingBottom="8dp">
 
+        <!-- Back Button to b changed to a back arrow action button  -->
+        <Button/>
+
+        <!-- Options Button (⋮ as text) -->
+        <Button/>
+
+        <!-- Edit Button -->
+        <Button/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
