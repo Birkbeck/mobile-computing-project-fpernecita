@@ -114,7 +114,7 @@
         android:id="@+id/instructionsTextView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Step 2\nHeat a splash of oil and a small knob of butter in a non-stick frying pan until sizzling. Add spoonfuls of batter to make pancakes the size you like, we made 20cm pancakes for a serving size of one per person, or if you are very hungry, two per person."
+        android:text="Step 2\nHeat a splash of oil and a small knob of butter in a non-stick frying pan until sizzling. Add spoonfuls of batter to make pancakes at the desired sized."
         android:textSize="16sp"
         android:layout_marginTop="8dp"/>
 
