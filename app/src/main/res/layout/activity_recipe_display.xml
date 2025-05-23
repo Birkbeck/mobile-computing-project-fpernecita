@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".RecipeDisplayActivity">
+    tools:context=".MainActivity">
+<!--    tools:context=".RecipeDisplayActivity">-->
 
     <!-- Top Action Bar -->
     <androidx.constraintlayout.widget.ConstraintLayout
