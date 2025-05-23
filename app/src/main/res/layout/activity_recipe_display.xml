@@ -106,14 +106,30 @@
                 android:textSize="16sp"
                 android:layout_marginTop="8dp"/>
 
+            <TextView
+                android:id="@+id/ingredientsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredient2"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
 
             <TextView
                 android:id="@+id/ingredientsTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ingredient1"
+                android:text="@string/ingredient3"
                 android:textSize="16sp"
                 android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/ingredientsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredient4"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
 
             <!-- Instruction header and text -->
             <TextView
