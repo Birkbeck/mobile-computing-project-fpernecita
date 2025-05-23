@@ -12,6 +12,9 @@
     <string name="options">⋮</string>
     <string name="edit">Edit</string>
     <string name="add_more">Add More</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
 
     <string name="title_label">Title</string>
     <string name="select_category_label">Category</string>
@@ -36,4 +39,7 @@
     <string name="instructions_placeholder1">Step 1\nWeigh out and tip the flour, baking powder and sugar into a large bowl with a small pinch of salt. Crack in the eggs and whisk until smooth. Add the milk while whisking.</string>
     <string name="instructions_placeholder2">Step 2\nHeat a splash of oil and a small knob of butter in a non-stick frying pan until sizzling. Add spoonfuls of batter to make pancakes at the desired sized.</string>
     <string name="instructions_placeholder3">Step 3\nCook until bubbles start to form on the surface, then flip and cook the other side. Eat straight away or keep warm in a low oven while you cook another batch. Serve pancakes with pancetta or blueberries, drizzled with extra maple syrup.</string>
+
+    <string name="delete_recipe_header">Delete Recipe?</string>
+    <string name="delete_dialog_text_view">Are you sure you want to delete this recipe?</string>
 </resources>
