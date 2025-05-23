@@ -18,9 +18,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:padding="8dp"
-        android:maxLines="2"
-        android:ellipsize="end"/>
+        android:padding="8dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,9 +28,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:padding="8dp"
-        android:maxLines="2"
-        android:ellipsize="end"/>
+        android:padding="8dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,9 +38,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:padding="8dp"
-        android:maxLines="2"
-        android:ellipsize="end"/>
+        android:padding="8dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -54,7 +48,6 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:padding="8dp"
-        android:maxLines="2"/>
+        android:padding="8dp"/>
 
 </GridLayout>
