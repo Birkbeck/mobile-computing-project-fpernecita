@@ -107,7 +107,6 @@
                 android:layout_marginTop="8dp"/>
 
             <TextView
-                android:id="@+id/ingredientsTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ingredient2"
@@ -115,7 +114,6 @@
                 android:layout_marginTop="4dp"/>
 
             <TextView
-                android:id="@+id/ingredientsTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ingredient3"
@@ -123,7 +121,6 @@
                 android:layout_marginTop="4dp"/>
 
             <TextView
-                android:id="@+id/ingredientsTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ingredient4"
