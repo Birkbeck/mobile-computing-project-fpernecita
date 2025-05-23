@@ -24,7 +24,7 @@
             android:layout_height="48dp"
             android:text="@string/back"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <!-- Options/Three dots vertical button (⋮ as text) -->
         <Button
@@ -35,7 +35,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp"/>
 
         <!-- Save Button -->
         <Button
@@ -55,7 +55,7 @@
         android:text="@string/title_label"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"/>
 
     <!-- Recipe Title Input -->
     <EditText

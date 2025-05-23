@@ -75,23 +75,23 @@
                 android:layout_margin="8dp"/>
 
             <!-- CATEGORY 1 -->
-            <include layout="@layout/category_section" />
+            <include layout="@layout/category_section"/>
             <include layout="@layout/recipe_item"/>
 
             <!-- CATEGORY 2 -->
-            <include layout="@layout/category_section" />
+            <include layout="@layout/category_section"/>
             <include layout="@layout/recipe_item"/>
 
             <!-- CATEGORY 3 -->
-            <include layout="@layout/category_section" />
+            <include layout="@layout/category_section"/>
             <include layout="@layout/recipe_item"/>
 
             <!-- CATEGORY 4 -->
-            <include layout="@layout/category_section" />
+            <include layout="@layout/category_section"/>
             <include layout="@layout/recipe_item"/>
 
             <!-- CATEGORY 5 -->
-            <include layout="@layout/category_section" />
+            <include layout="@layout/category_section"/>
             <include layout="@layout/recipe_item"/>
 
         </LinearLayout>
@@ -104,6 +104,6 @@
         android:layout_width="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        android:src="@android:drawable/ic_input_add" />
+        android:src="@android:drawable/ic_input_add"/>
 
 </FrameLayout>
