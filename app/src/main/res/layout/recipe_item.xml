@@ -16,7 +16,11 @@
         android:id="@+id/recipeNameTextView1"
         android:text="@string/recipe_name_text_view1"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,7 +28,11 @@
         android:id="@+id/recipeNameTextView2"
         android:text="@string/recipe_name_text_view2"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,7 +40,11 @@
         android:id="@+id/recipeNameTextView3"
         android:text="@string/recipe_name_text_view3"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,6 +52,10 @@
         android:id="@+id/recipeNameTextView4"
         android:text="@string/recipe_name_text_view4"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
 
 </GridLayout>
