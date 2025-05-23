@@ -13,7 +13,31 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/recipeNameTextView"
-        android:text="@string/recipe_name_text_view"
+        android:text="@string/recipe_name_text_view1"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/recipeNameTextView"
+        android:text="@string/recipe_name_text_view2"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/recipeNameTextView"
+        android:text="@string/recipe_name_text_view3"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/recipeNameTextView"
+        android:text="@string/recipe_name_text_view4"
         android:textSize="18sp"
         android:textStyle="bold"/>
 
