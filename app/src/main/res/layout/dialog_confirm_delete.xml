@@ -21,11 +21,13 @@
 
         <!--  Confirm Button  -->
         <Button
+            android:id="@+id/confirmDeleteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <!--  Cancel Button  -->
         <Button
+            android:id="@+id/cancelDeleteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
