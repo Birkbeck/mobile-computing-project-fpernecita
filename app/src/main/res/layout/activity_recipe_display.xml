@@ -119,14 +119,14 @@
                 android:id="@+id/instructionsTextView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Step 1\nWeigh out and tip the flour, baking powder and sugar into a large bowl with a small pinch of salt. Crack in the eggs and whisk until smooth. Add the milk while whisking."
+                android:text="@string/instructions_placeholder1"
                 android:layout_marginTop="8dp"/>
 
             <TextView
                 android:id="@+id/instructionsTextView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Step 2\nHeat a splash of oil and a small knob of butter in a non-stick frying pan until sizzling. Add spoonfuls of batter to make pancakes at the desired sized."
+                android:text="@string/instructions_placeholder2"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp"/>
 
@@ -134,7 +134,7 @@
                 android:id="@+id/instructionsTextView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Step 3\nCook until bubbles start to form on the surface, then flip and cook the other side. Eat straight away or keep warm in a low oven while you cook another batch. Serve pancakes with pancetta or blueberries, drizzled with extra maple syrup."
+                android:text="@string/instructions_placeholder3"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp"/>
 
