@@ -6,18 +6,23 @@
     <string name="recipe_name_text_view3">Wholewheat granola</string>
     <string name="recipe_name_text_view4">English Breaakfast</string>
     <string name="recipe_category_text_view">Breakfast</string>
+
     <string name="back">Back</string>
     <string name="save">Save</string>
     <string name="options">⋮</string>
     <string name="edit">Edit</string>
     <string name="add_more">Add More</string>
+
     <string name="title_label">Title</string>
     <string name="select_category_label">Category</string>
     <string name="description_label">Description</string>
     <string name="ingredients_label">Ingredients</string>
     <string name="instructions_label">Instructions</string>
+
     <string name="recipe_title_hint">Recipe Title</string>
     <string name="description_hint">Description</string>
     <string name="ingredients_hint">Ingredient</string>
     <string name="instructions_hint">Instructions</string>
+
+    <string name="description_text_view">Great recipe for breakfast that can be topped with, blueberries, cream and bacon </string>"
 </resources>
