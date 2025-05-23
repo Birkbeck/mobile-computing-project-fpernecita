@@ -30,6 +30,7 @@
     <string name="ingredient2">- 1 tsp baking powder</string>
     <string name="ingredient3">- 1 tbsp caster sugar</string>
     <string name="ingredient4">- 2 medium eggs</string>
+    <string name="ingredient5">- 300ml milk</string>
 
     <string name="instructions_header">Instructions:</string>
     <string name="instructions_placeholder1">Step 1\nWeigh out and tip the flour, baking powder and sugar into a large bowl with a small pinch of salt. Crack in the eggs and whisk until smooth. Add the milk while whisking.</string>
