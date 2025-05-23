@@ -139,6 +139,7 @@
                 android:layout_marginTop="8dp"/>
 
         </LinearLayout>
+
     </ScrollView>
     <!-- added the action button for adding recipes -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -148,4 +149,5 @@
     android:layout_gravity="bottom|end"
     android:layout_margin="16dp"
     android:src="@android:drawable/ic_input_add" />
+
 </FrameLayout>
