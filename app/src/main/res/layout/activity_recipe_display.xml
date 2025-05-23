@@ -47,7 +47,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!-- Static Mock Data -->
     <!-- Recipe Title -->
-    <TextView/>
+    <TextView
+        android:id="@+id/recipeTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fluffy Pancakes"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
 
     <!-- Category -->
     <TextView/>
