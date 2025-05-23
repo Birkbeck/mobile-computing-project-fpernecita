@@ -107,15 +107,14 @@
         android:id="@+id/instructionsTextView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Step 1"
-        android:textSize="16sp"
+        android:text="Step 1\nWeigh out and tip the flour, baking powder and sugar into a large bowl with a small pinch of salt. Crack in the eggs and whisk until smooth. Add the maple syrup and milk while whisking."
         android:layout_marginTop="8dp"/>
 
     <TextView
         android:id="@+id/instructionsTextView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Step 2"
+        android:text="Step 2\nHeat a splash of oil and a small knob of butter in a non-stick frying pan until sizzling. Add spoonfuls of batter to make pancakes the size you like, we made 20cm pancakes for a serving size of one per person, or if you are very hungry, two per person."
         android:textSize="16sp"
         android:layout_marginTop="8dp"/>
 
@@ -123,7 +122,7 @@
         android:id="@+id/instructionsTextView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Step 2"
+        android:text="Step 3\nCook until bubbles start to form on the surface, then flip and cook the other side. Eat straight away or keep warm in a low oven while you cook another batch. Serve pancakes with pancetta or blueberries, drizzled with extra maple syrup."
         android:textSize="16sp"
         android:layout_marginTop="8dp"/>
 
