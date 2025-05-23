@@ -89,7 +89,7 @@
         android:id="@+id/ingredientsTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="- 300g self-raising flour\n- 1 tbsp baking powder\n- 1 tbsp caster sugar\n- 2 medium eggs\n- 300ml milk"
         android:textSize="16sp"
         android:layout_marginTop="8dp"/>
 
