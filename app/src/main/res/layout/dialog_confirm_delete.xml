@@ -5,7 +5,8 @@
     android:id="@+id/deleteConfirmDialog"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp"
+    android:background="@color/light_grey">
 
     <!--  Dialog Header  -->
     <TextView
