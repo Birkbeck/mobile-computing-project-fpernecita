@@ -67,7 +67,13 @@
         android:textSize="16sp" />
 
     <!-- Description -->
-    <TextView/>
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
 
     <!-- Ingredients header and list -->
     <TextView/>
