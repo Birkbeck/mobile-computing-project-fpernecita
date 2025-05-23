@@ -45,22 +45,22 @@
             android:layout_marginEnd="8dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <-- Static Mock Data -->
-    <-- Recipe Title -->
+    <!-- Static Mock Data -->
+    <!-- Recipe Title -->
     <TextView/>
 
-    <-- Category -->
+    <!-- Category -->
     <TextView/>
 
-    <-- Description -->
+    <!-- Description -->
     <TextView/>
 
-    <-- Ingredients header and list -->
+    <!-- Ingredients header and list -->
     <TextView/>
 
     <TextView/>
 
-    <-- Instruction header and text -->
+    <!-- Instruction header and text -->
     <TextView/>
 
     <TextView/>
