@@ -26,7 +26,10 @@
 
     <string name="description_text_view">Great recipe for breakfast that can be topped with, blueberries, cream and bacon </string>"
     <string name="ingredients_header">Ingredients:</string>
-    <string name="ingredient1">- Ingredient</string>
+    <string name="ingredient1">- 300g self-raising flour</string>
+    <string name="ingredient2">- 1 tsp baking powder</string>
+    <string name="ingredient3">- 1 tbsp caster sugar</string>
+    <string name="ingredient4">- 2 medium eggs</string>
 
     <string name="instructions_header">Instructions:</string>
     <string name="instructions_placeholder1">Step 1\nWeigh out and tip the flour, baking powder and sugar into a large bowl with a small pinch of salt. Crack in the eggs and whisk until smooth. Add the milk while whisking.</string>
