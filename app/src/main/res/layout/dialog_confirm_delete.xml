@@ -5,7 +5,7 @@
     android:id="@+id/deleteConfirmDialog"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="8dp"
     android:background="@color/light_grey">
 
     <!--  Dialog Header  -->
@@ -17,7 +17,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="4dp"/>
-
+    <!-- Separator line -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -34,6 +34,13 @@
         android:textSize="16sp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="16dp"/>
+    <!-- Separator line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp" />
 
     <!--  Buttons setup  -->
     <LinearLayout
