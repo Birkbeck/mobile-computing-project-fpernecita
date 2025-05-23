@@ -107,7 +107,7 @@
         android:id="@+id/instructionsTextView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Step 1\nWeigh out and tip the flour, baking powder and sugar into a large bowl with a small pinch of salt. Crack in the eggs and whisk until smooth. Add the maple syrup and milk while whisking."
+        android:text="Step 1\nWeigh out and tip the flour, baking powder and sugar into a large bowl with a small pinch of salt. Crack in the eggs and whisk until smooth. Add the milk while whisking."
         android:layout_marginTop="8dp"/>
 
     <TextView
