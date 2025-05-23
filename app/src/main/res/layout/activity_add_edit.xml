@@ -144,7 +144,8 @@
         android:id="@+id/addMoreIngredientsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_more"/>
+        android:text="@string/add_more"
+        android:layout_marginTop="8dp"/>
 
     <!--  Instructions Input  -->
     <TextView
@@ -164,5 +165,14 @@
         android:inputType="textMultiLine"
         android:gravity="top"
         android:layout_marginTop="16dp"/>
+
+    <!-- Add More Button -->
+    <Button
+        android:id="@+id/addMoreInstructionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_more"
+        android:layout_marginTop="8dp"/>
+
 
 </LinearLayout>
