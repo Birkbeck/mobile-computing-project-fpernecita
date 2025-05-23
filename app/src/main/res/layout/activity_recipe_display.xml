@@ -15,7 +15,13 @@
         android:paddingBottom="8dp">
 
         <!-- Back Button to b changed to a back arrow action button  -->
-        <Button/>
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <!-- Options Button (⋮ as text) -->
         <Button/>
