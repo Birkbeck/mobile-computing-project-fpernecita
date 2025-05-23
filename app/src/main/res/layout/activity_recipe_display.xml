@@ -1,141 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
-<!--    tools:context=".RecipeDisplayActivity">-->
 
-    <!-- Top Action Bar -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="8dp">
+        android:layout_height="match_parent">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:context=".MainActivity">
+        <!--    tools:context=".RecipeDisplayActivity">-->
 
-        <!-- Back Button to b changed to a back arrow action button  -->
-        <Button
-            android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="@string/back"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            <!-- Top Action Bar -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp">
 
-        <!-- Options Button (⋮ as text) -->
-        <Button
-            android:id="@+id/optionsButton"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:text="@string/options"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="8dp"/>
+                <!-- Back Button to b changed to a back arrow action button  -->
+                <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="@string/back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- Edit Button -->
-        <Button
-            android:id="@+id/editButton"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="@string/edit"
-            app:layout_constraintEnd_toStartOf="@id/optionsButton"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="8dp"/>
+                <!-- Options Button (⋮ as text) -->
+                <Button
+                    android:id="@+id/optionsButton"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:text="@string/options"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <!-- Static Mock Data -->
-    <!-- Mock Data Source: https://www.bbcgoodfood.com/recipes/fluffy-pancakes  -->
-    <!-- Recipe Title -->
-    <TextView
-        android:id="@+id/recipeTitleTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/recipe_name_text_view2"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp" />
+                <!-- Edit Button -->
+                <Button
+                    android:id="@+id/editButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="@string/edit"
+                    app:layout_constraintEnd_toStartOf="@id/optionsButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp"/>
 
-    <!-- Category -->
-    <TextView
-        android:id="@+id/categoryTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:padding="6dp"
-        android:text="@string/recipe_category_text_view"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Static Mock Data -->
+            <!-- Mock Data Source: https://www.bbcgoodfood.com/recipes/fluffy-pancakes  -->
+            <!-- Recipe Title -->
+            <TextView
+                android:id="@+id/recipeTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recipe_name_text_view2"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
 
-    <!-- Description -->
-    <TextView
-        android:id="@+id/descriptionTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/description_text_view"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"/>
+            <!-- Category -->
+            <TextView
+                android:id="@+id/categoryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="6dp"
+                android:text="@string/recipe_category_text_view"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
 
-    <!-- Ingredients header and list -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ingredients_header"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp"/>
-    <!-- use '\n[#]' for multiline text view for ingredients   -->
-    <TextView
-        android:id="@+id/ingredientsTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="- 300g self-raising flour\n- 1 tbsp baking powder\n- 1 tbsp caster sugar\n- 2 medium eggs\n- 300ml milk"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"/>
+            <!-- Description -->
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_text_view"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
 
-    <!-- Instruction header and text -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/instructions_header"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp"/>
+            <!-- Ingredients header and list -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients_header"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+            <!-- use '\n[#]' for multiline text view for ingredients   -->
+            <TextView
+                android:id="@+id/ingredientsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- 300g self-raising flour\n- 1 tbsp baking powder\n- 1 tbsp caster sugar\n- 2 medium eggs\n- 300ml milk"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
 
-    <TextView
-        android:id="@+id/instructionsTextView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Step 1\nWeigh out and tip the flour, baking powder and sugar into a large bowl with a small pinch of salt. Crack in the eggs and whisk until smooth. Add the milk while whisking."
-        android:layout_marginTop="8dp"/>
+            <!-- Instruction header and text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/instructions_header"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
 
-    <TextView
-        android:id="@+id/instructionsTextView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Step 2\nHeat a splash of oil and a small knob of butter in a non-stick frying pan until sizzling. Add spoonfuls of batter to make pancakes at the desired sized."
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/instructionsTextView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Step 1\nWeigh out and tip the flour, baking powder and sugar into a large bowl with a small pinch of salt. Crack in the eggs and whisk until smooth. Add the milk while whisking."
+                android:layout_marginTop="8dp"/>
 
-    <TextView
-        android:id="@+id/instructionsTextView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Step 3\nCook until bubbles start to form on the surface, then flip and cook the other side. Eat straight away or keep warm in a low oven while you cook another batch. Serve pancakes with pancetta or blueberries, drizzled with extra maple syrup."
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/instructionsTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Step 2\nHeat a splash of oil and a small knob of butter in a non-stick frying pan until sizzling. Add spoonfuls of batter to make pancakes at the desired sized."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
 
-    <!-- added the action button for adding recipes -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addRecipeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@android:drawable/ic_input_add" />
+            <TextView
+                android:id="@+id/instructionsTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Step 3\nCook until bubbles start to form on the surface, then flip and cook the other side. Eat straight away or keep warm in a low oven while you cook another batch. Serve pancakes with pancetta or blueberries, drizzled with extra maple syrup."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
 
+            <!-- added the action button for adding recipes -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addRecipeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:src="@android:drawable/ic_input_add" />
 
-
-</LinearLayout>
+        </LinearLayout>
+    </ScrollView>
