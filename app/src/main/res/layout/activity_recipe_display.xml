@@ -46,6 +46,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!-- Static Mock Data -->
+    <!-- Mock Data Source: https://www.bbcgoodfood.com/recipes/fluffy-pancakes  -->
     <!-- Recipe Title -->
     <TextView
         android:id="@+id/recipeTitleTextView"
