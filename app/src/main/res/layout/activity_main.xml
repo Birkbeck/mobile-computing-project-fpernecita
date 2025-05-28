@@ -52,10 +52,6 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <LinearLayout
             android:id="@+id/categoryContainer"
             android:layout_width="match_parent"
@@ -94,8 +90,6 @@
             <include layout="@layout/recipe_item"/>
 
         </LinearLayout>
-    </ScrollView>
-
     <!-- added the action button for adding recipes -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addRecipeButton"
