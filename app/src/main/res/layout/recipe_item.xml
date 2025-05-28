@@ -34,7 +34,6 @@
             android:textStyle="bold"
             android:textColor="@color/black"/>
 
-
     </FrameLayout>
     <GridLayout
         android:id="@+id/recipeGridLayout"
