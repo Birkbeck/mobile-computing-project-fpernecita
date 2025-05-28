@@ -1,50 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:id="@+id/main"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:padding="16dp"-->
-<!--    tools:context=".MainActivity">-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/appTitleTextView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/app_title"-->
-<!--        android:textSize="24sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-
-<!--    &lt;!&ndash; Recycler View for the recipe list &ndash;&gt;-->
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/recipeRecycleView"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:clipToPadding="False"-->
-<!--        android:paddingTop="8dp"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/appTitleTextView"-->
-<!--        app:layout_constraintBottom_toTopOf="@id/addRecipeButton"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"/>-->
-
-<!--    &lt;!&ndash; Action button for adding recipes &ndash;&gt;-->
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/addRecipeButton"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:src="@android:drawable/ic_input_add"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        android:layout_margin="24dp"/>-->
-
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -52,51 +8,95 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-        <LinearLayout
-            android:id="@+id/categoryContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/appTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <!-- App Title -->
-            <TextView
-                android:id="@+id/appTitleTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_title"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_margin="8dp"/>
 
-            <!-- CATEGORY 1 -->
-            <include layout="@layout/category_section"/>
-            <include layout="@layout/recipe_item"/>
+    <!-- Recycler View for the recipe list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipeRecycleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="False"
+        android:paddingTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/appTitleTextView"
+        app:layout_constraintBottom_toTopOf="@id/addRecipeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-            <!-- CATEGORY 2 -->
-            <include layout="@layout/category_section"/>
-            <include layout="@layout/recipe_item"/>
-
-            <!-- CATEGORY 3 -->
-            <include layout="@layout/category_section"/>
-            <include layout="@layout/recipe_item"/>
-
-            <!-- CATEGORY 4 -->
-            <include layout="@layout/category_section"/>
-            <include layout="@layout/recipe_item"/>
-
-            <!-- CATEGORY 5 -->
-            <include layout="@layout/category_section"/>
-            <include layout="@layout/recipe_item"/>
-
-        </LinearLayout>
-    <!-- added the action button for adding recipes -->
+    <!-- Action button for adding recipes -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addRecipeButton"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@android:drawable/ic_input_add"/>
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="24dp"/>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<FrameLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:padding="16dp"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/categoryContainer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            &lt;!&ndash; App Title &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/appTitleTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/app_title"-->
+<!--                android:textSize="30sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:layout_margin="8dp"/>-->
+
+<!--            &lt;!&ndash; CATEGORY 1 &ndash;&gt;-->
+<!--            <include layout="@layout/category_section"/>-->
+<!--            <include layout="@layout/recipe_item"/>-->
+
+<!--            &lt;!&ndash; CATEGORY 2 &ndash;&gt;-->
+<!--            <include layout="@layout/category_section"/>-->
+<!--            <include layout="@layout/recipe_item"/>-->
+
+<!--            &lt;!&ndash; CATEGORY 3 &ndash;&gt;-->
+<!--            <include layout="@layout/category_section"/>-->
+<!--            <include layout="@layout/recipe_item"/>-->
+
+<!--            &lt;!&ndash; CATEGORY 4 &ndash;&gt;-->
+<!--            <include layout="@layout/category_section"/>-->
+<!--            <include layout="@layout/recipe_item"/>-->
+
+<!--            &lt;!&ndash; CATEGORY 5 &ndash;&gt;-->
+<!--            <include layout="@layout/category_section"/>-->
+<!--            <include layout="@layout/recipe_item"/>-->
+
+<!--        </LinearLayout>-->
+<!--    &lt;!&ndash; added the action button for adding recipes &ndash;&gt;-->
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/addRecipeButton"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:src="@android:drawable/ic_input_add"/>-->
+
+<!--</FrameLayout>-->
