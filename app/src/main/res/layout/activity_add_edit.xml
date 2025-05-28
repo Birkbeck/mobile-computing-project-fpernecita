@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="8dp">
-
+        <!-- Navigation action bar-->
         <!-- Back Button to b changed to a back arrow action button-->
         <Button
             android:id="@+id/backButton"
@@ -47,7 +47,7 @@
             android:layout_marginEnd="8dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <!--Form layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
