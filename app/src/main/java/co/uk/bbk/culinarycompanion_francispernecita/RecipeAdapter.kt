@@ -9,4 +9,8 @@ class RecipeAdapter(
     private val recipes: List<Recipe> = listOf()) :
     RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
+        val binding = RecipeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return RecipeViewHolder(binding)
+    }
 }
