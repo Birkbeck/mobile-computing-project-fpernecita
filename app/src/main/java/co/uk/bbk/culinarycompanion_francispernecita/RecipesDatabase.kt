@@ -5,5 +5,6 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-class RecipesDatabase {
+@Database(entities = [Recipe::class], version = 1)
+abstract class RecipesDatabase : RoomDatabase() {
 }
