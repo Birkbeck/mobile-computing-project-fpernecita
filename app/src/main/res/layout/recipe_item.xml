@@ -11,90 +11,91 @@
 
     </data>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
-
-        <ImageView
-            android:id="@+id/categoryImageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/category_image_placeholder_foreground"
-            android:scaleType="centerCrop"
-            android:background="@color/light_blue"/>
-
-        <View
-            android:background="#30000000"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-        <TextView
-            android:id="@+id/categoryTitleTextView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:paddingStart="16dp"
-            android:paddingTop="12dp"
-            android:text="@string/recipe_category_text_view"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-
-    </FrameLayout>
-    <GridLayout
-        android:id="@+id/recipeGridLayout"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:columnCount="2"
-        android:orientation="horizontal"
-        android:layout_marginBottom="8dp">
+        android:orientation="vertical">
 
-        <!-- text box for the recipe title -->
-        <TextView
-            android:layout_width="wrap_content"
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/categoryImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/category_image_placeholder_foreground"
+                android:scaleType="centerCrop"
+                android:background="@color/light_blue"/>
+
+            <View
+                android:background="#30000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/categoryTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="12dp"
+                android:text="@string/recipe_category_text_view"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </FrameLayout>
+        <GridLayout
+            android:id="@+id/recipeGridLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/recipeNameTextView1"
-            android:text="@string/recipe_name_text_view1"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:padding="8dp"/>
+            android:padding="16dp"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/recipeNameTextView2"
-            android:text="@string/recipe_name_text_view2"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:padding="8dp"/>
+            <!-- text box for the recipe title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recipeNameTextView1"
+                android:text="@string/recipe_name_text_view1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="8dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/recipeNameTextView3"
-            android:text="@string/recipe_name_text_view3"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:padding="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recipeNameTextView2"
+                android:text="@string/recipe_name_text_view2"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="8dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/recipeNameTextView4"
-            android:text="@string/recipe_name_text_view4"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:padding="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recipeNameTextView3"
+                android:text="@string/recipe_name_text_view3"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="8dp"/>
 
-    </GridLayout>
-</LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recipeNameTextView4"
+                android:text="@string/recipe_name_text_view4"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+        </GridLayout>
+    </LinearLayout>
+</layout>
