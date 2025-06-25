@@ -22,5 +22,16 @@ class RecipeDisplayActivity : AppCompatActivity() {
             ?: return finish()
 
         viewModel.RecipesDao = RecipeDatabase.getInstance(applicationContext).recipesDao()
+
+        bindRecipeDetails()
+
+    }
+
+    private fun bindRecipeDetails() {
+        binding.titleTextView.text = recipe.title
+        binding.categoryTextView.text = recipe.category
+        binding.descriptionTextView.text = recipe.description
+        binding.ingredientsTextView.text = recipe.ingredients
+        binding.instructionsTextView.text = recipe.instructions
     }
 }
