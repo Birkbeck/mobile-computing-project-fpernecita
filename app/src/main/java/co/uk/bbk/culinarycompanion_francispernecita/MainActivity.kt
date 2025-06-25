@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
+
+        val adapter = RecipeAdapter()
+        binding.recipeRecyclerView.adapter = adapter
+
         }
     }
 }
