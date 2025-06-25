@@ -31,6 +31,10 @@ class RecipeDisplayActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.optionsButton.setOnClickListener {
+            showDeleteDialog()
+        }
+
     }
 
     private fun bindRecipeDetails() {
