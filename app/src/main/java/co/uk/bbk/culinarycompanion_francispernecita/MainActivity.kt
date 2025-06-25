@@ -31,7 +31,9 @@ class MainActivity : AppCompatActivity() {
         viewModel.readAllRecipes()
         viewModel.recipes.observe(this) { recipes ->
             adapter.updateRecipes(recipes)
-
         }
     }
+    // Show the add recipe dialog
+    private fun showAddRecipeDialog(recipe: Recipe?) {
+        val dialogBinding = RecipesDialogBinding.inflate(layoutInflater)
 }
