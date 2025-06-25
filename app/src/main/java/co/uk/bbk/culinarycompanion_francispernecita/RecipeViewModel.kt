@@ -53,7 +53,7 @@ class RecipeViewModel: ViewModel() {
     // Delete a recipe from the database
     fun deleteRecipe(recipe: Recipe) {
         viewModelScope.launch {
-            recipeDao?.let {
+            recipesDao?.let {
                 it.deleteRecipe(recipe)
 
                 readAllRecipes()
