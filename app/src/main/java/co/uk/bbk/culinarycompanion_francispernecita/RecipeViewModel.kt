@@ -43,7 +43,7 @@ class RecipeViewModel: ViewModel() {
     // Update an existing recipe in the database
     fun editRecipe(recipe: Recipe) {
         viewModelScope.launch {
-            recipeDao?.let {
+            recipesDao?.let {
                 it.updateRecipe(recipe)
 
                 readAllRecipes()
