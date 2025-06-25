@@ -21,4 +21,9 @@ class RecipeAdapter(
     override fun getItemCount(): Int {
         return Recipe.size
     }
+
+    fun updateRecipes(recipes: List<Recipes>) {
+        this.recipes = recipes
+        notifyDataSetChanged()
+    }
 }
