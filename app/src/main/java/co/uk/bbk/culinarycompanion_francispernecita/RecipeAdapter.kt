@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.RecipeItemBinding
 
 class RecipeAdapter(
-    private var recipes: List<Recipe> = listOf()),
+    private var recipes: List<Recipe> = listOf(),
     private val onClick: (Recipe) -> Unit
 ) : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
     // ViewHolder class for each recipe item
@@ -30,8 +30,12 @@ class RecipeAdapter(
 
     inner class RecipeViewHolder(private val binding: RecipeItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun bind(recipe: Recipe) {
             binding.recipe = recipe
+            binding.root.setOnClickListener {
+                onClick(recipe)
+            }
             binding.executePendingBindings()
         }
     }
