@@ -21,6 +21,11 @@ abstract class RecipesDatabase : RoomDatabase() {
                     RecipesDatabase::class.java,
                     "recipes_database"
                 )
+                    // Wipes and rebuilds instead of migrating if no Migration object.
+                    .fallbackToDestructiveMigration()
+                    .build()
+                    .also { INSTANCE = it }
+            }
             }
     }
 }
