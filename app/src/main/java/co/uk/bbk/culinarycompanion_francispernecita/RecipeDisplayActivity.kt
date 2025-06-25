@@ -12,4 +12,10 @@ class RecipeDisplayActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRecipeDisplayBinding
     private val viewModel: RecipeViewModel by viewModels()
     private lateinit var recipe: Recipe
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityRecipeDisplayBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
 }
