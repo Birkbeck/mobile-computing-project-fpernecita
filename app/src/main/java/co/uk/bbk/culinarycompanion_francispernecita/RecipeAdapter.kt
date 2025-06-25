@@ -29,6 +29,9 @@ class RecipeAdapter(
 
     inner class RecipeViewHolder(private val binding: RecipeItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-
+        fun bind(recipe: Recipe) {
+            binding.recipe: recipe
+            binding.executePendingBindings()
+        }
     }
 }
