@@ -17,5 +17,8 @@ class RecipeDisplayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRecipeDisplayBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        recipe = intent.getSerializableExtra("recipe") as? Recipe
+            ?: return finish()
     }
 }
