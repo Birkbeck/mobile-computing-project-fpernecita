@@ -23,14 +23,32 @@ class RecipeViewModel: ViewModel() {
             }
         }
     }
+    // Add a new recipe to the database
     fun addRecipe(title: String, category: String, description: String, ingredients: String, instructions: String) {
         viewModelScope.launch {
             recipesDao?.let {
-                val recipe = recipe(title = title, category = category, description = description, ingredients = ingredients, instructions = instructions)
+                val recipe = recipe(
+                    title = title,
+                    category = category,
+                    description = description,
+                    ingredients = ingredients,
+                    instructions = instructions
+                )
                 it.insertRecipe(recipe)
 
                 readAllExpenses()
             }
         }
+    }
+
+    fun editRecipe(recipe: Recipe) {
+        viewModelScope.launch {
+            recipeDao?.let {
+                it.updateRecipe(recipe)
+
+                readAllRecipes()
+            }
+        }
 
     }
+}
