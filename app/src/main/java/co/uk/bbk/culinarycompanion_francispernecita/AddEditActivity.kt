@@ -11,5 +11,5 @@ class AddEditActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddEditBinding
     private val viewModel: RecipeViewModel by viewModels()
 
-
+    private var editingRecipe: Recipe? = null
 }
