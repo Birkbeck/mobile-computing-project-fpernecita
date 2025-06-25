@@ -110,27 +110,7 @@
         android:layout_marginTop="16dp"/>
 
     <EditText
-        android:id="@+id/ingredientsEditText1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/ingredients_hint"
-        android:textSize="18sp"
-        android:inputType="text"
-        android:gravity="top"
-        android:layout_marginTop="16dp"/>
-
-    <EditText
-        android:id="@+id/ingredientsEditText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/ingredients_hint"
-        android:textSize="18sp"
-        android:inputType="text"
-        android:gravity="top"
-        android:layout_marginTop="16dp"/>
-
-    <EditText
-        android:id="@+id/ingredientsEditText3"
+        android:id="@+id/ingredientsEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/ingredients_hint"
@@ -157,7 +137,7 @@
         android:layout_marginTop="16dp"/>
 
     <EditText
-        android:id="@+id/instructionsEditText1"
+        android:id="@+id/instructionsEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/instructions_hint"
@@ -166,25 +146,6 @@
         android:gravity="top"
         android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/instructionsEditText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/instructions_hint"
-        android:textSize="18sp"
-        android:inputType="textMultiLine"
-        android:gravity="top"
-        android:layout_marginTop="16dp"/>
-
-    <EditText
-        android:id="@+id/instructionsEditText3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/instructions_hint"
-        android:textSize="18sp"
-        android:inputType="textMultiLine"
-        android:gravity="top"
-        android:layout_marginTop="16dp"/>
 
     <!-- Add More Button -->
     <Button
