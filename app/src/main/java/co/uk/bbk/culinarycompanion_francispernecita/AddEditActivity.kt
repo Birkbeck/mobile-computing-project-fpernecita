@@ -56,4 +56,15 @@ class AddEditActivity : AppCompatActivity() {
             if (editingRecipe == null) {
                 viewModel.addRecipe(title, category, description, ingredients, instructions)
 
-}
+            } else {
+                val updatedRecipe = editingRecipe!!.copy(
+                    title = title,
+                    category = category,
+                    description = description,
+                    ingredients = ingredients,
+                    instructions = instructions
+                )
+                viewModel.editRecipe(updatedRecipe)
+            }
+
+        }
