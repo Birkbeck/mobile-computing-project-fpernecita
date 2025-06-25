@@ -27,6 +27,11 @@ class MainActivity : AppCompatActivity() {
         binding.addRecipeButton.setOnClickListener { showAddRecipeDialog(null) }
 
         val dao = RecipesDatabase.getInstance(applicationContext).recipesDao()
+        viewModel.recipesDao = dao
+        viewModel.readAllRecipes()
+        viewModel.recipes.observe(this) { recipes ->
+            adapter.updateRecipes(recipes)
+
         }
     }
 }
