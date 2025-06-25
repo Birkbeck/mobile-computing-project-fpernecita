@@ -52,6 +52,10 @@ class RecipeDisplayActivity : AppCompatActivity() {
             dialog.dismiss()
             finish()
         }
+        dialogBinding.cancelButton.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
     }
 
 
