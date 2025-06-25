@@ -15,5 +15,12 @@ abstract class RecipesDatabase : RoomDatabase() {
 
         fun getDatabase(context: Context): RecipesDatabase {
             return INSTANCE ?: synchronized(this) {
+                // Create database here
+                INSTANCE ?: Room.databaseBuilder(
+                    context.applicationContext,
+                    RecipesDatabase::class.java,
+                    "recipes_database"
+                )
+            }
     }
 }
