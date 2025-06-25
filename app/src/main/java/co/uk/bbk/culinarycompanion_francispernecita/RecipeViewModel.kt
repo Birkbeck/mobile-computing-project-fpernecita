@@ -11,7 +11,7 @@ class RecipeViewModel: ViewModel() {
     private val _recipes = MutableLiveData(listOf<Recipe>())
     val recipes: LiveData<List<Recipe>> = _recipes
 
-    var recipesDao = RecipesDao? = null
+    var recipesDao: RecipesDao? = null
     // Read all recipes from the database - used a template from the week 8 lecture
     fun readAllRecipes() {
         viewModelScope.launch {
