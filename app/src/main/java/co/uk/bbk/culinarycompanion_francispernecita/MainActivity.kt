@@ -36,4 +36,11 @@ class MainActivity : AppCompatActivity() {
     // Show the add recipe dialog
     private fun showAddRecipeDialog(recipe: Recipe?) {
         val dialogBinding = RecipesDialogBinding.inflate(layoutInflater)
+        recipes?.let {
+            dialogBinding.titleEditText.setText(it.title)
+            dialogBinding.categoryEditText.setText(it.category)
+            dialogBinding.descriptionEditText.setText(it.description)
+            dialogBinding.ingredientsEditText.setText(it.ingredients)
+            dialogBinding.instructionsEditText.setText(it.instructions)
+        }
 }
