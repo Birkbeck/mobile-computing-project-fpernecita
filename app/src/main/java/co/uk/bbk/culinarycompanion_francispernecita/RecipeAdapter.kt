@@ -26,4 +26,9 @@ class RecipeAdapter(
         this.recipes = recipes
         notifyDataSetChanged()
     }
+
+    inner class RecipeViewHolder(private val binding: RecipeItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+    }
 }
