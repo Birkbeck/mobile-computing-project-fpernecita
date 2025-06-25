@@ -27,4 +27,5 @@ class AddEditActivity : AppCompatActivity() {
         viewModel.RecipesDao = RecipeDatabase.getInstance(applicationContext).recipesDao(
 
         // Check if recipe is an existing one
+        ediiingRecipe = intent.getSerializableExtra("edit_recipe") as? Recipe
 }
