@@ -70,6 +70,6 @@ class MainActivity : AppCompatActivity() {
                 dialog.dismiss()
             }
         }
+        dialog.show()
     }
-    dialog.show()
 }
