@@ -2,6 +2,7 @@ package co.uk.bbk.culinarycompanion_francispernecita
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
  // Recipe entity class representing the recipe table in the database
 
 @Entity(tableName = "recipe")
