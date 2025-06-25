@@ -22,4 +22,7 @@ class AddEditActivity : AppCompatActivity() {
         val categories = listOf("Breakfast", "Brunch", "Lunch", "Dinner", "Desserts", "Other")
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, categories)
         binding.categorySpinner.adapter = spinnerAdapter
+
+        // get DAO
+        viewModel.RecipesDao = RecipeDatabase.getInstance(applicationContext).recipesDao()
 }
