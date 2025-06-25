@@ -26,6 +26,6 @@ abstract class RecipesDatabase : RoomDatabase() {
                     .build()
                     .also { INSTANCE = it }
             }
-            }
+        }
     }
 }
