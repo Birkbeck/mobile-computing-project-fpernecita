@@ -1,176 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- A static mock layout for the displaying the recipe -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recipeDisplayContainer"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".RecipeDisplayActivity">
-<!--    tools:context=".MainActivity">-->
-    <LinearLayout
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="recipe"
+            type="co.uk.bbk.culinarycompanion_francispernecita.Recipe"/>
+
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/recipeDisplayContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-
-        <!-- Top Action Bar -->
-        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".RecipeDisplayActivity">
+    <!--    tools:context=".MainActivity">-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <!-- Back Button to b changed to a back arrow action button  -->
-            <Button
-                android:id="@+id/backButton"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:text="@string/back"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
 
-            <!-- Options Button (⋮ as text) -->
-            <Button
-                android:id="@+id/optionsButton"
-                android:layout_width="50dp"
-                android:layout_height="48dp"
-                android:text="@string/options"
+            <!-- Top Action Bar -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp">
+
+                <!-- Back Button to b changed to a back arrow action button  -->
+                <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="@string/back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <!-- Options Button (⋮ as text) -->
+                <Button
+                    android:id="@+id/optionsButton"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:text="@string/options"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp"/>
+
+                <!-- Edit Button -->
+                <Button
+                    android:id="@+id/editButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="@string/edit"
+                    app:layout_constraintEnd_toStartOf="@id/optionsButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Static Mock Data -->
+            <!-- Mock Data Source: https://www.bbcgoodfood.com/recipes/fluffy-pancakes  -->
+            <!-- Recipe Title -->
+            <TextView
+                android:id="@+id/recipeTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recipe_name_text_view2"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginTop="8dp" />
 
-            <!-- Edit Button -->
-            <Button
-                android:id="@+id/editButton"
+            <!-- Category -->
+            <TextView
+                android:id="@+id/categoryTextView"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:text="@string/edit"
-                app:layout_constraintEnd_toStartOf="@id/optionsButton"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="8dp"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="6dp"
+                android:text="@string/recipe_category_text_view"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <!-- Static Mock Data -->
-        <!-- Mock Data Source: https://www.bbcgoodfood.com/recipes/fluffy-pancakes  -->
-        <!-- Recipe Title -->
-        <TextView
-            android:id="@+id/recipeTitleTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/recipe_name_text_view2"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginTop="8dp" />
+            <!-- Description -->
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_text_view"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
 
-        <!-- Category -->
-        <TextView
-            android:id="@+id/categoryTextView"
+            <!-- Ingredients header and list -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients_header"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/ingredientsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredient1"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredient2"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredient3"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredient4"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredient5"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
+
+            <!-- Instruction header and text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/instructions_header"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/instructionsTextView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/instructions_placeholder1"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/instructionsTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/instructions_placeholder2"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/instructionsTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/instructions_placeholder3"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+        <!-- added the action button for adding recipes -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addRecipeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:padding="6dp"
-            android:text="@string/recipe_category_text_view"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@android:drawable/ic_input_add"/>
 
-        <!-- Description -->
-        <TextView
-            android:id="@+id/descriptionTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/description_text_view"
-            android:textSize="16sp"
-            android:layout_marginTop="16dp"/>
-
-        <!-- Ingredients header and list -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ingredients_header"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"/>
-
-        <TextView
-            android:id="@+id/ingredientsTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ingredient1"
-            android:textSize="16sp"
-            android:layout_marginTop="8dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ingredient2"
-            android:textSize="16sp"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ingredient3"
-            android:textSize="16sp"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ingredient4"
-            android:textSize="16sp"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ingredient5"
-            android:textSize="16sp"
-            android:layout_marginTop="4dp"/>
-
-
-        <!-- Instruction header and text -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/instructions_header"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"/>
-
-        <TextView
-            android:id="@+id/instructionsTextView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/instructions_placeholder1"
-            android:layout_marginTop="8dp"/>
-
-        <TextView
-            android:id="@+id/instructionsTextView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/instructions_placeholder2"
-            android:textSize="16sp"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:id="@+id/instructionsTextView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/instructions_placeholder3"
-            android:textSize="16sp"
-            android:layout_marginTop="4dp"/>
-
-    </LinearLayout>
-    <!-- added the action button for adding recipes -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addRecipeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@android:drawable/ic_input_add"/>
-
-</FrameLayout>
+    </FrameLayout>
+</layout>
