@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.activity.viewModels
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityMainBinding
 
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.recipeRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.recipeRecyclerView.adapter = adapter
 
         binding.addRecipeButton.setOnClickListener {
