@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 
 import androidx.activity.viewModels
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityMainBinding
-import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityRecipeDisplayBinding
 
 
 class MainActivity : AppCompatActivity() {
