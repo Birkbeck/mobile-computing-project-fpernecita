@@ -29,5 +29,10 @@ class AddEditActivity : AppCompatActivity() {
         // Check if recipe is an existing one
         editingRecipe = intent.getSerializableExtra("edit_recipe") as? Recipe
 
+        editingRecipe?.let { recipe ->
+            binding.recipeTitleEditText.setText(recipe.title)
+            binding.descriptionEditText.setText(recipe.description)
+            binding.ingredientsEditText1.setText(recipe.ingredients)
+            binding.instructionsEditText1.setText(recipe.instructions)
 
 }
