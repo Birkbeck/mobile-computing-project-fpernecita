@@ -41,4 +41,16 @@ class AddEditActivity : AppCompatActivity() {
             }
         }
 
+        binding.saveButton.setOnClickListener {
+            val title = binding.recipeTitleEditText.text.toString()
+            val description = binding.descriptionEditText.text.toString()
+            val ingredients = binding.ingredientsEditText1.text.toString()
+            val instructions = binding.instructionsEditText1.text.toString()
+            val category = binding.categorySpinner.selectedItem.toString()
+
+            if (title.isEmpty() || description.isEmpty() || ingredients.isEmpty() || instructions.isEmpty()) {
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
 }
