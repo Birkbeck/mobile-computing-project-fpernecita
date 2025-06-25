@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
-import co.uk.bbk.culinarycompanion_francispernecita.R
+import androidx.recyclerview.widget.LinearLayoutManager
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityMainBinding
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.RecipesDialogBinding
 
