@@ -20,7 +20,7 @@ class RecipeDisplayActivity : AppCompatActivity() {
 
         recipe = intent.getSerializableExtra("recipe", Recipe::class.java) ?: return finish()
 
-        viewModel.recipesDao = RecipeDatabase.getDatabase(applicationContext).recipesDao()
+        viewModel.recipesDao = RecipesDatabase.getDatabase(applicationContext).recipesDao()
 
         bindRecipeDetails()
 
