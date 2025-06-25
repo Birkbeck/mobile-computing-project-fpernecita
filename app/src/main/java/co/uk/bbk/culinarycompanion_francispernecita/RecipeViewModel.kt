@@ -36,7 +36,7 @@ class RecipeViewModel: ViewModel() {
                 )
                 it.insertRecipe(recipe)
 
-                readAllExpenses()
+                readAllRecipes()
             }
         }
     }
@@ -47,6 +47,16 @@ class RecipeViewModel: ViewModel() {
                 it.updateRecipe(recipe)
 
                 readAllRecipes()
+            }
+        }
+    }
+    // Delete a recipe from the database
+    fun deleteRecipe(recipe: Recipe) {
+        viewModelScope.launch {
+            recipeDao?.let {
+                it.deleteRecipe(recipe)
+
+                readAllRecipe()
             }
         }
 
