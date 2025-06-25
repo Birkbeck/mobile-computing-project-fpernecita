@@ -9,7 +9,10 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityMainBinding
-import co.uk.bbk.culinarycompanion_francispernecita.databinding.RecipesDialogBinding
+import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityAddEditBinding
+import co.uk.bbk.culinarycompanion_francispernecita.databinding.DialogConfirmDeleteBinding
+import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityRecipeDisplayBinding
+
 
 class MainActivity : AppCompatActivity() {
 
