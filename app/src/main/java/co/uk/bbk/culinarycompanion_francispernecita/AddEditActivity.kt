@@ -70,5 +70,6 @@ class AddEditActivity : AppCompatActivity() {
         }
         binding.backButton.setOnClickListener {
             finish()
+        }
     }
 }
