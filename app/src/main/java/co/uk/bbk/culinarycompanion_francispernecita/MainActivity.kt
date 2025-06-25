@@ -43,4 +43,7 @@ class MainActivity : AppCompatActivity() {
             dialogBinding.ingredientsEditText.setText(it.ingredients)
             dialogBinding.instructionsEditText.setText(it.instructions)
         }
+         val dialog = AlertDialog.Builder(this)
+            .setView(dialogBinding.root)
+    }
 }
