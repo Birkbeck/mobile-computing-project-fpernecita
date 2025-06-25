@@ -17,11 +17,11 @@ class RecipeAdapter(
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         holder.bind(Recipe[position])
     }
-
+    // get the number of recipes
     override fun getItemCount(): Int {
         return Recipe.size
     }
-
+    // update the list of recipes
     fun updateRecipes(recipes: List<Recipes>) {
         this.recipes = recipes
         notifyDataSetChanged()
