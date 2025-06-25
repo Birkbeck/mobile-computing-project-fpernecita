@@ -1,158 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- a mock layout for the add/edit recipe form -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recipeFormContainer"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical"
-    tools:context=".AddEditActivity">
-    <!--    tools:context=".MainActivity">-->
+<layout>
+    <data>
+        <variable
+            name="recipe"
+            type="co.uk.bbk.culinarycompanion_francispernecita.Recipe"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/iconsContainer"
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/recipeFormContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="8dp">
-        <!-- Navigation action bar-->
-        <!-- Back Button to b changed to a back arrow action button-->
-        <Button
-            android:id="@+id/backButton"
-            android:layout_width="80dp"
-            android:layout_height="48dp"
-            android:text="@string/back"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical"
+        tools:context=".AddEditActivity">
+        <!--    tools:context=".MainActivity">-->
 
-        <!-- Options/Three dots vertical button (⋮ as text) -->
-        <Button
-            android:id="@+id/optionsButton"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:text="@string/options"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="8dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/iconsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp">
+            <!-- Navigation action bar-->
+            <!-- Back Button to b changed to a back arrow action button-->
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:text="@string/back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- Save Button -->
-        <Button
-            android:id="@+id/saveButton"
+            <!-- Options/Three dots vertical button (⋮ as text) -->
+            <Button
+                android:id="@+id/optionsButton"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:text="@string/options"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/save"
+                app:layout_constraintEnd_toStartOf="@id/optionsButton"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Form layout -->
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="@string/save"
-            app:layout_constraintEnd_toStartOf="@id/optionsButton"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="8dp"/>
+            android:layout_height="wrap_content"
+            android:text="@string/title_label"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <!--Form layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_label"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"/>
+        <!-- Recipe Title Input -->
+        <EditText
+            android:id="@+id/recipeTitleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/recipe_title_hint"
+            android:textSize="18sp"
+            android:inputType="textCapWords"
+            android:layout_marginTop="16dp"/>
+        <!--  Category Dropdown  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_category_label"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
 
-    <!-- Recipe Title Input -->
-    <EditText
-        android:id="@+id/recipeTitleEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/recipe_title_hint"
-        android:textSize="18sp"
-        android:inputType="textCapWords"
-        android:layout_marginTop="16dp"/>
-    <!--  Category Dropdown  -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/select_category_label"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"/>
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
 
-    <Spinner
-        android:id="@+id/categorySpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
+        <!--  Recipe Description Input  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_label"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
 
-    <!--  Recipe Description Input  -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/description_label"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description_hint"
+            android:textSize="18sp"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/descriptionEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/description_hint"
-        android:textSize="18sp"
-        android:inputType="textMultiLine"
-        android:gravity="top"
-        android:layout_marginTop="16dp"/>
+        <!--  Ingredients Input  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ingredients_label"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
 
-    <!--  Ingredients Input  -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ingredients_label"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/ingredientsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ingredients_hint"
+            android:textSize="18sp"
+            android:inputType="text"
+            android:gravity="top"
+            android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/ingredientsEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/ingredients_hint"
-        android:textSize="18sp"
-        android:inputType="text"
-        android:gravity="top"
-        android:layout_marginTop="16dp"/>
+        <!-- Add More Button -->
+        <Button
+            android:id="@+id/addMoreIngredientsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_more"
+            android:layout_marginTop="8dp"/>
 
-    <!-- Add More Button -->
-    <Button
-        android:id="@+id/addMoreIngredientsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_more"
-        android:layout_marginTop="8dp"/>
+        <!--  Instructions Input  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instructions_label"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
 
-    <!--  Instructions Input  -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/instructions_label"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"/>
-
-    <EditText
-        android:id="@+id/instructionsEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/instructions_hint"
-        android:textSize="18sp"
-        android:inputType="textMultiLine"
-        android:gravity="top"
-        android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/instructionsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/instructions_hint"
+            android:textSize="18sp"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginTop="16dp"/>
 
 
-    <!-- Add More Button -->
-    <Button
-        android:id="@+id/addMoreInstructionsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_more"
-        android:layout_marginTop="8dp"/>
+        <!-- Add More Button -->
+        <Button
+            android:id="@+id/addMoreInstructionsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_more"
+            android:layout_marginTop="8dp"/>
 
-</LinearLayout>
+    </LinearLayout>
+</layout>
