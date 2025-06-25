@@ -12,4 +12,9 @@ class AddEditActivity : AppCompatActivity() {
     private val viewModel: RecipeViewModel by viewModels()
 
     private var editingRecipe: Recipe? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityAddEditBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 }
