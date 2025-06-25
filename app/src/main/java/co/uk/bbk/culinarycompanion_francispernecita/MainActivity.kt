@@ -47,23 +47,23 @@ class MainActivity : AppCompatActivity() {
         }
         val dialog = AlertDialog.Builder(this)
             .setView(dialogBinding.root)
-    }
+            .create()
 
-    dialogBinding.saveButton.setOnClickListener
-    {
-        val title = dialogBinding.titleEditText.text.toString()
-        val category = dialogBinding.categoryEditText.text.toString()
-        val description = dialogBinding.descriptionEditText.text.toString()
-        val ingredients = dialogBinding.ingredientsEditText.text.toString()
-        val instructions = dialogBinding.instructionsEditText.text.toString()
-        if (title.isNotEmpty() &&
-            category.isNotEmpty() &&
-            description.isNotEmpty() &&
-            ingredients.isNotEmpty() &&
-            instructions.isNotEmpty()
-        ){
-            if (recipe == null) {
-                viewModel.addRecipe(title, category, description, ingredients, instructions)
-            }
+
+        dialogBinding.saveButton.setOnClickListener {
+            val title = dialogBinding.titleEditText.text.toString()
+            val category = dialogBinding.categoryEditText.text.toString()
+            val description = dialogBinding.descriptionEditText.text.toString()
+            val ingredients = dialogBinding.ingredientsEditText.text.toString()
+            val instructions = dialogBinding.instructionsEditText.text.toString()
+            if (title.isNotEmpty() &&
+                category.isNotEmpty() &&
+                description.isNotEmpty() &&
+                ingredients.isNotEmpty() &&
+                instructions.isNotEmpty()
+            ){
+                if (recipe == null) {
+                    viewModel.addRecipe(title, category, description, ingredients, instructions)
+                }
         }
     }
