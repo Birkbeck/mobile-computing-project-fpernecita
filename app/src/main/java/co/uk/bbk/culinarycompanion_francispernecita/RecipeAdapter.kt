@@ -13,4 +13,8 @@ class RecipeAdapter(
         val binding = RecipeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return RecipeViewHolder(binding)
     }
+
+    override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
+        holder.bind(Recipe[position])
+    }
 }
