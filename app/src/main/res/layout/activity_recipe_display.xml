@@ -109,37 +109,9 @@
                 android:id="@+id/ingredientsTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ingredient1"
+                android:text="@string/ingredient"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ingredient2"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ingredient3"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ingredient4"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ingredient5"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
 
 
             <!-- Instruction header and text -->
@@ -155,24 +127,8 @@
                 android:id="@+id/instructionsTextView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/instructions_placeholder1"
+                android:text="@string/instructions_placeholder"
                 android:layout_marginTop="8dp"/>
-
-            <TextView
-                android:id="@+id/instructionsTextView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/instructions_placeholder2"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
-
-            <TextView
-                android:id="@+id/instructionsTextView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/instructions_placeholder3"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
         <!-- added the action button for adding recipes -->
