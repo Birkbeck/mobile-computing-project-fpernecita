@@ -72,4 +72,6 @@ class MainActivity : AppCompatActivity() {
         }
         dialog.show()
     }
+
+    private fun showDeleteDialog(recipe: Recipe) {}
 }
