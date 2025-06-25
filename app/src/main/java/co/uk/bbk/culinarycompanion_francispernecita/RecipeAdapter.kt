@@ -17,4 +17,8 @@ class RecipeAdapter(
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         holder.bind(Recipe[position])
     }
+
+    override fun getItemCount(): Int {
+        return Recipe.size
+    }
 }
