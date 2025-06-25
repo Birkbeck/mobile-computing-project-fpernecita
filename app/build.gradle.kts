@@ -55,8 +55,8 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
-    kapt("androidx.room:room-compiler:2.7.2")
+    kapt(libs.androidx.room.compiler)
     // annotationProcessor("androidx.room:room-compiler:2.6.1")
-    implementation("androidx.room:room-ktx:2.7.2")
+    implementation(libs.androidx.room.ktx)
 
 }
