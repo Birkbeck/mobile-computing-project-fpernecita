@@ -32,8 +32,8 @@ class AddEditActivity : AppCompatActivity() {
         editingRecipe?.let { recipe ->
             binding.recipeTitleEditText.setText(recipe.title)
             binding.descriptionEditText.setText(recipe.description)
-            binding.ingredientsEditText1.setText(recipe.ingredients)
-            binding.instructionsEditText1.setText(recipe.instructions)
+            binding.ingredientsEditText.setText(recipe.ingredients)
+            binding.instructionsEditText.setText(recipe.instructions)
 
             val categoryIndex = categories.indexOf(recipe.category)
             if (categoryIndex >= 0) {
