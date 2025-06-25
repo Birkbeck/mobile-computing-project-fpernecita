@@ -25,7 +25,12 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        val adapter = RecipeAdapter()
+        val adapter = RecipeAdapter { selectedRecipe ->
+            val intent = Intent(this, RecipeDisplayActivity::class.java)
+            intent.putExtra("recipe", selectedRecipe)
+            startActivity(intent)
+        }
+
         binding.recipeRecyclerView.adapter = adapter
 
         binding.addRecipeButton.setOnClickListener {
