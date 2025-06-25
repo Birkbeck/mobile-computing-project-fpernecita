@@ -82,6 +82,7 @@ class MainActivity : AppCompatActivity() {
         dialogBinding.deleteButton.setOnClickListener {
             viewModel.deleteRecipe(recipe)
             dialog.dismiss()
+            finish()
         }
 
         dialogBinding.cancelButton.setOnClickListener {
