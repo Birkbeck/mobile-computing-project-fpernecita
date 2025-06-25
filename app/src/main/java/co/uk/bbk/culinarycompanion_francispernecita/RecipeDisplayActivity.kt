@@ -40,4 +40,11 @@ class RecipeDisplayActivity : AppCompatActivity() {
         binding.ingredientsTextView.text = recipe.ingredients
         binding.instructionsTextView.text = recipe.instructions
     }
+
+    private fun showDeleteDialog() {
+        val dialogBinding = DialogConfirmDeleteBinding.inflate(layoutInflater)
+        val dialog = AlertDialog.Builder(this)
+            .setView(dialogBinding.root)
+            .create()
+    }
 }
