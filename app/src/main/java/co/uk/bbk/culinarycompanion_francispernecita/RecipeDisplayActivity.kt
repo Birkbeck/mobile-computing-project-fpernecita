@@ -25,6 +25,12 @@ class RecipeDisplayActivity : AppCompatActivity() {
 
         bindRecipeDetails()
 
+        binding.editButton.setOnClickListener {
+            val intent = Intent(this, AddEditActivity::class.java)
+            intent.putExtra("edit_recipe", recipe)
+            startActivity(intent)
+        }
+
     }
 
     private fun bindRecipeDetails() {
