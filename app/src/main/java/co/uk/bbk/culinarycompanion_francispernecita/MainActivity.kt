@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 if (recipe == null) {
                     viewModel.addRecipe(title, category, description, ingredients, instructions)
                 } else {
-                    viewModel.updateRecipe(recipe.id, title, category, description, ingredients, instructions)
+                    viewModel.updatedRecipe(recipe.id, title, category, description, ingredients, instructions)
                 }
                 dialog.dismiss()
             }
