@@ -28,7 +28,10 @@ class MainActivity : AppCompatActivity() {
         val adapter = RecipeAdapter()
         binding.recipeRecyclerView.adapter = adapter
 
-        binding.addRecipeButton.setOnClickListener { showAddRecipeDialog(null) }
+        binding.addRecipeButton.setOnClickListener {
+            val intent = Intent(this, AddEditActivity::class.java)
+            startActivity(intent)
+        }
 
         val dao = RecipesDatabase.getInstance(applicationContext).recipesDao()
         viewModel.recipesDao = dao
