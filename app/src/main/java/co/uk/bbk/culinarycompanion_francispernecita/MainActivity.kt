@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             adapter.updateRecipes(recipes)
         }
     }
+
     // Show the add recipe dialog
     private fun showAddRecipeDialog(recipe: Recipe?) {
         val dialogBinding = RecipesDialogBinding.inflate(layoutInflater)
@@ -43,7 +44,22 @@ class MainActivity : AppCompatActivity() {
             dialogBinding.ingredientsEditText.setText(it.ingredients)
             dialogBinding.instructionsEditText.setText(it.instructions)
         }
-         val dialog = AlertDialog.Builder(this)
+        val dialog = AlertDialog.Builder(this)
             .setView(dialogBinding.root)
     }
-}
+
+    dialogBinding.saveButton.setOnClickListener
+    {
+        val title = dialogBinding.titleEditText.text.toString()
+        val category = dialogBinding.categoryEditText.text.toString()
+        val description = dialogBinding.descriptionEditText.text.toString()
+        val ingredients = dialogBinding.ingredientsEditText.text.toString()
+        val instructions = dialogBinding.instructionsEditText.text.toString()
+        if (title.isNotEmpty() &&
+            category.isNotEmpty() &&
+            description.isNotEmpty() &&
+            ingredients.isNotEmpty() &&
+            instructions.isNotEmpty()
+        )
+        }
+    }
