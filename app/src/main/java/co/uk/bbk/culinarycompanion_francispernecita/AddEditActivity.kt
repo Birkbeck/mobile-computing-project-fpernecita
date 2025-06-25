@@ -35,4 +35,10 @@ class AddEditActivity : AppCompatActivity() {
             binding.ingredientsEditText1.setText(recipe.ingredients)
             binding.instructionsEditText1.setText(recipe.instructions)
 
+            val categoryIndex = categories.indexOf(recipe.category)
+            if (categoryIndex >= 0) {
+                binding.categorySpinner.setSelection(categoryIndex)
+            }
+        }
+
 }
