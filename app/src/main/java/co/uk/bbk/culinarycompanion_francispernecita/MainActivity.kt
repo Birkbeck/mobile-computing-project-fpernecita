@@ -41,21 +41,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    private fun showDeleteDialog(recipe: Recipe) {
-        val dialogBinding = DialogConfirmDeleteBinding.inflate(layoutInflater)
-        val dialog = AlertDialog.Builder(this)
-            .setView(dialogBinding.root)
-            .create()
-
-        dialogBinding.confirmDeleteButton.setOnClickListener {
-            viewModel.deleteRecipe(recipe)
-            dialog.dismiss()
-            finish()
-        }
-
-        dialogBinding.cancelDeleteButton.setOnClickListener {
-            dialog.dismiss()
-        }
-    }
 }
