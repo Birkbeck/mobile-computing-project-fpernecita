@@ -53,4 +53,7 @@ class AddEditActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (editingRecipe == null) {
+                viewModel.addRecipe(title, category, description, ingredients, instructions)
+
 }
