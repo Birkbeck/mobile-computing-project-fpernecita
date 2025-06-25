@@ -73,5 +73,10 @@ class MainActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showDeleteDialog(recipe: Recipe) {}
+    private fun showDeleteDialog(recipe: Recipe) {
+        val dialogBinding = DialogConfirmDeleteBinding.inflate(layoutInflater)
+        val dialog = AlertDialog.Builder(this)
+            .setView(dialogBinding.root)
+            .create()
+    }
 }
