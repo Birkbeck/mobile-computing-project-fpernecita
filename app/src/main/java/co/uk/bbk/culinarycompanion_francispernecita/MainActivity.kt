@@ -37,6 +37,17 @@ class MainActivity : AppCompatActivity() {
 
         val dao = RecipesDatabase.getDatabase(applicationContext).recipesDao()
         viewModel.recipesDao = dao
+
+        // dummy test data
+        viewModel.addRecipe(
+            title = "Test Pancakes",
+            category = "Breakfast",
+            description = "Delicious fluffy pancakes with syrup",
+            ingredients = "Flour, Eggs, Milk, Butter",
+            instructions = "1. Mix all ingredients\n2. Cook on pan until golden\n3. Serve with syrup"
+        )
+
+        // trigger readAllRecipes()
         viewModel.readAllRecipes()
         viewModel.recipes.observe(this) { recipes ->
             adapter.updateRecipes(recipes)
