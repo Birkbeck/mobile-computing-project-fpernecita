@@ -46,5 +46,13 @@ class RecipeDisplayActivity : AppCompatActivity() {
         val dialog = AlertDialog.Builder(this)
             .setView(dialogBinding.root)
             .create()
+
+        dialogBinding.deleteButton.setOnClickListener {
+            viewModel.deleteRecipe(recipe)
+            dialog.dismiss()
+            finish()
+        }
     }
+
+
 }
