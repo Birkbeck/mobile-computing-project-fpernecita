@@ -18,8 +18,7 @@ class RecipeDisplayActivity : AppCompatActivity() {
         binding = ActivityRecipeDisplayBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        recipe = intent.getSerializableExtra("recipe") as? Recipe
-            ?: return finish()
+        recipe = intent.getSerializableExtra("recipe", Recipe::class.java) ?: return finish()
 
         viewModel.recipesDao = RecipeDatabase.getInstance(applicationContext).recipesDao()
 
