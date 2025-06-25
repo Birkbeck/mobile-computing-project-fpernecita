@@ -8,5 +8,8 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 class RecipeViewModel: ViewModel() {
-    
+    private val _recipes = MutableLiveData<ListOf<Recipe>>()
+    val recipes: LiveData<List<Recipe>> = _recipes
+
+    var recipesDao = RecipesDao? = null
 }
