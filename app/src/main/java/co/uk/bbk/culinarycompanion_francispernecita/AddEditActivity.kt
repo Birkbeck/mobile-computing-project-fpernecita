@@ -66,5 +66,7 @@ class AddEditActivity : AppCompatActivity() {
                 )
                 viewModel.editRecipe(updatedRecipe)
             }
-
+            finish()
         }
+    }
+}
