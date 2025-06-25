@@ -23,4 +23,14 @@ class RecipeViewModel: ViewModel() {
             }
         }
     }
-}
+    fun addRecipe(title: String, category: String, description: String, ingredients: String, instructions: String) {
+        viewModelScope.launch {
+            recipesDao?.let {
+                val recipe = recipe(title = title, category = category, description = description, ingredients = ingredients, instructions = instructions)
+                it.insertRecipe(recipe)
+
+                readAllExpenses()
+            }
+        }
+
+    }
