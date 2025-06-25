@@ -24,7 +24,7 @@ class AddEditActivity : AppCompatActivity() {
         binding.categorySpinner.adapter = spinnerAdapter
 
         // get DAO
-        viewModel.RecipesDao = RecipeDatabase.getInstance(applicationContext).recipesDao(
+        viewModel.recipesDao = RecipeDatabase.getInstance(applicationContext).recipesDao()
 
         // Check if recipe is an existing one
         editingRecipe = intent.getSerializableExtra("edit_recipe") as? Recipe
