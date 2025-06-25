@@ -15,7 +15,7 @@ class RecipeAdapter(
     }
     // Bind data to the view holder
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
-        holder.bind(recipe[position])
+        holder.bind(recipes[position])
     }
     // get the number of recipes
     override fun getItemCount(): Int {
