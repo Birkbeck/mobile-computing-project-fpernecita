@@ -56,7 +56,7 @@ class RecipeViewModel: ViewModel() {
             recipeDao?.let {
                 it.deleteRecipe(recipe)
 
-                readAllRecipe()
+                readAllRecipes()
             }
         }
 
