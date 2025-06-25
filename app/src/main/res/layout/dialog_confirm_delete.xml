@@ -1,72 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/deleteConfirmDialog"
-    android:layout_gravity="center"
-    android:orientation="vertical"
-    android:padding="8dp"
-    android:background="@color/light_grey">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!--  Dialog Header  -->
-    <TextView
-        android:id="@+id/deleteConfirmDialogTitle"
+    <data>
+
+        <variable
+            name="recipe"
+            type="co.uk.bbk.culinarycompanion_francispernecita.Recipe"/>
+
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/delete_recipe_header"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="4dp"/>
-    <!-- Separator line -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp" />
+        android:id="@+id/deleteConfirmDialog"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@color/light_grey">
 
-    <!--  Dialog message  -->
-    <TextView
-        android:id="@+id/deleteConfirmDialogMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/delete_dialog_text_view"
-        android:textSize="16sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="16dp"/>
-    <!-- Separator line -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
-        android:layout_marginBottom="12dp"/>
-
-    <!--  Buttons setup  -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <!--  Confirm Button  -->
-        <Button
-            android:id="@+id/confirmDeleteButton"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
+        <!--  Dialog Header  -->
+        <TextView
+            android:id="@+id/deleteConfirmDialogTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/confirm"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp"/>
+            android:text="@string/delete_recipe_header"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"/>
+        <!-- Separator line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
 
-        <!--  Cancel Button  -->
-        <Button
-            android:id="@+id/cancelDeleteButton"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
+        <!--  Dialog message  -->
+        <TextView
+            android:id="@+id/deleteConfirmDialogMessage"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cancel"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"/>
+            android:text="@string/delete_dialog_text_view"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"/>
+        <!-- Separator line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="12dp"/>
 
+        <!--  Buttons setup  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!--  Confirm Button  -->
+            <Button
+                android:id="@+id/confirmDeleteButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"/>
+
+            <!--  Cancel Button  -->
+            <Button
+                android:id="@+id/cancelDeleteButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</layout>
