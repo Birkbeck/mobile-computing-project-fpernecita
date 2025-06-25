@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         dialogBinding.saveButton.setOnClickListener {
             val title = dialogBinding.recipeTitleEditText.text.toString()
-            val category = dialogBinding.categorySpinner.text.toString()
+            val category = dialogBinding.categorySpinner.selectedItem.toString()
             val description = dialogBinding.descriptionEditText.text.toString()
             val ingredients = dialogBinding.ingredientsEditText.text.toString()
             val instructions = dialogBinding.instructionsEditText.text.toString()
