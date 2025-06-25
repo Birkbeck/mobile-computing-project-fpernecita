@@ -61,6 +61,4 @@ class RecipeDisplayActivity : AppCompatActivity() {
         }
         dialog.show()
     }
-
-
 }
