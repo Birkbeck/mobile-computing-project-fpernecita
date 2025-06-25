@@ -41,6 +41,11 @@ class MainActivity : AppCompatActivity() {
     // Show the add recipe dialog
     private fun showAddRecipeDialog(recipe: Recipe?) {
         val dialogBinding = ActivityAddEditBinding.inflate(layoutInflater)
+
+        val categories = listOf("Breakfast", "Lunch", "Dinner", "Dessert", "Other")
+        val index = categories.indexOf(it.category)
+        if (index >= 0) dialogBinding.categorySpinner.setSelection(index)
+
         recipe?.let {
             dialogBinding.recipeTitleEditText.setText(it.title)
             dialogBinding.categorySpinner.setText(it.category)
