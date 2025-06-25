@@ -73,7 +73,14 @@ class MainActivity : AppCompatActivity() {
                 if (recipe == null) {
                     viewModel.addRecipe(title, category, description, ingredients, instructions)
                 } else {
-                    viewModel.editRecipe(recipe.id, title, category, description, ingredients, instructions)
+                    val updatedRecipe = recipe.copy(
+                        title = title,
+                        category = category,
+                        description = description,
+                        ingredients = ingredients,
+                        instructions = instructions
+                    )
+                    viewModel.editRecipe(updatedRecipe)
                 }
                 dialog.dismiss()
             }
