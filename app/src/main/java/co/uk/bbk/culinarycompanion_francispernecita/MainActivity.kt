@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = RecipeAdapter()
         binding.recipeRecyclerView.adapter = adapter
 
+        binding.addRecipeButton.setOnClickListener { showAddRecipeDialog(null) }
         }
     }
 }
