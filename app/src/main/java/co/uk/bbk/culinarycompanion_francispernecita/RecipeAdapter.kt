@@ -8,12 +8,12 @@ import co.uk.bbk.culinarycompanion_francispernecita.databinding.RecipeItemBindin
 class RecipeAdapter(
     private val recipes: List<Recipe> = listOf()) :
     RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
-
+    // ViewHolder class for each recipe item
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
         val binding = RecipeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return RecipeViewHolder(binding)
     }
-
+    // Bind data to the view holder
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         holder.bind(Recipe[position])
     }
