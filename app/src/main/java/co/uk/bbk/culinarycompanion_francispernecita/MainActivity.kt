@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         binding.recipeRecyclerView.adapter = adapter
 
         binding.addRecipeButton.setOnClickListener { showAddRecipeDialog(null) }
+
+        val dao = RecipesDatabase.getInstance(applicationContext).recipesDao()
         }
     }
 }
