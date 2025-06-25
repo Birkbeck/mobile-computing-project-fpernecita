@@ -9,5 +9,7 @@ import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityRecipeDi
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.DialogConfirmDeleteBinding
 
 class RecipeDisplayActivity : AppCompatActivity() {
-
+    private lateinit var binding: ActivityRecipeDisplayBinding
+    private val viewModel: RecipeViewModel by viewModels()
+    private lateinit var recipe: Recipe
 }
