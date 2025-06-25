@@ -34,8 +34,8 @@ class RecipeDisplayActivity : AppCompatActivity() {
     }
 
     private fun bindRecipeDetails() {
-        binding.titleTextView.text = recipe.title
-        binding.categoryTextView.text = recipe.category
+        binding.recipeTitleTextView.text = recipe.title
+        binding.categorySpinner.text = recipe.category
         binding.descriptionTextView.text = recipe.description
         binding.ingredientsTextView.text = recipe.ingredients
         binding.instructionsTextView.text = recipe.instructions
