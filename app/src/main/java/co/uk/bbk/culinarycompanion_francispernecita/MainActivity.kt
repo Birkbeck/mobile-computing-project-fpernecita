@@ -61,9 +61,11 @@ class MainActivity : AppCompatActivity() {
                 description.isNotEmpty() &&
                 ingredients.isNotEmpty() &&
                 instructions.isNotEmpty()
-            ){
+            ) {
                 if (recipe == null) {
                     viewModel.addRecipe(title, category, description, ingredients, instructions)
                 }
+            }
         }
     }
+}
