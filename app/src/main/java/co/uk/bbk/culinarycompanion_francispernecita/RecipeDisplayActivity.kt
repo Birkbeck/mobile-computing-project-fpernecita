@@ -47,12 +47,12 @@ class RecipeDisplayActivity : AppCompatActivity() {
             .setView(dialogBinding.root)
             .create()
 
-        dialogBinding.deleteButton.setOnClickListener {
+        dialogBinding.confirmDeleteButton.setOnClickListener {
             viewModel.deleteRecipe(recipe)
             dialog.dismiss()
             finish()
         }
-        dialogBinding.cancelButton.setOnClickListener {
+        dialogBinding.cancelDeleteButton.setOnClickListener {
             dialog.dismiss()
         }
         dialog.show()
