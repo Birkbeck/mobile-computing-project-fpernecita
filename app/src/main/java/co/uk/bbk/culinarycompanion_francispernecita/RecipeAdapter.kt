@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.RecipeItemBinding
 
 class RecipeAdapter(
-    private val recipes: List<Recipe> = listOf()) :
+    private var recipes: List<Recipe> = listOf()) :
     RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
     // ViewHolder class for each recipe item
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
@@ -15,14 +15,14 @@ class RecipeAdapter(
     }
     // Bind data to the view holder
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
-        holder.bind(Recipe[position])
+        holder.bind(recipe[position])
     }
     // get the number of recipes
     override fun getItemCount(): Int {
-        return Recipe.size
+        return recipes.size
     }
     // update the list of recipes
-    fun updateRecipes(recipes: List<Recipes>) {
+    fun updateRecipes(recipes: List<Recipe>) {
         this.recipes = recipes
         notifyDataSetChanged()
     }
@@ -30,7 +30,7 @@ class RecipeAdapter(
     inner class RecipeViewHolder(private val binding: RecipeItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(recipe: Recipe) {
-            binding.recipe: recipe
+            binding.recipe = recipe
             binding.executePendingBindings()
         }
     }
