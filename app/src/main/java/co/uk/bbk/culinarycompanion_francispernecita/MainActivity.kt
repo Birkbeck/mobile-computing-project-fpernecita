@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val dao = RecipesDatabase.getInstance(applicationContext).recipesDao()
+        val dao = RecipesDatabase.getDatabase(applicationContext).recipesDao()
         viewModel.recipesDao = dao
         viewModel.readAllRecipes()
         viewModel.recipes.observe(this) { recipes ->
