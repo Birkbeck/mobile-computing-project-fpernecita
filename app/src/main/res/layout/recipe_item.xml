@@ -66,36 +66,6 @@
                 android:gravity="center"
                 android:padding="8dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/recipeNameTextView2"
-                android:text="@string/recipe_name_text_view2"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:padding="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/recipeNameTextView3"
-                android:text="@string/recipe_name_text_view3"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:padding="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/recipeNameTextView4"
-                android:text="@string/recipe_name_text_view4"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:padding="8dp"/>
-
         </GridLayout>
     </LinearLayout>
 </layout>
