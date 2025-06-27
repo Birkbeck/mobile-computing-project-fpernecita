@@ -53,7 +53,11 @@ class MainActivity : AppCompatActivity() {
         viewModel.readAllRecipes()
         viewModel.recipes.observe(this) { recipes ->
             val groupedRecipes = viewModel.groupRecipesByCategory(recipes)
-
+            val flattenedRecipeList = grouped.flatMap { (category ->
+                listOf(RecipeListItem.CategoryHeader(category.category)) +
+                        category.recipes.map { RecipeListItem.RecipeItem(it) }
+            }
+            adapter.submitList(flattenedRecipeList)
         }
     }
 
