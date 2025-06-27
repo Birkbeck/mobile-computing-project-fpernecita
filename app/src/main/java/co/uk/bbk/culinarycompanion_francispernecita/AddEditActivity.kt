@@ -53,33 +53,6 @@ class AddEditActivity : AppCompatActivity() {
             }
         }
 
-        binding.saveButton.setOnClickListener {
-            val title = binding.recipeTitleEditText.text.toString()
-            val category = binding.categorySpinner.selectedItem.toString()
-            val description = binding.descriptionEditText.text.toString()
-            val ingredients = binding.ingredientsEditText.text.toString()
-            val instructions = binding.instructionsEditText.text.toString()
-
-            if (title.isEmpty() || description.isEmpty() || ingredients.isEmpty() || instructions.isEmpty()) {
-                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
-                return
-            }
-
-            if (editingRecipe == null) {
-                viewModel.addRecipe(title, category, description, ingredients, instructions)
-
-            } else {
-                val updatedRecipe = editingRecipe!!.copy(
-                    title = title,
-                    category = category,
-                    description = description,
-                    ingredients = ingredients,
-                    instructions = instructions
-                )
-                viewModel.editRecipe(updatedRecipe)
-            }
-            finish()
-        }
         binding.backButton.setOnClickListener {
             finish()
         }
