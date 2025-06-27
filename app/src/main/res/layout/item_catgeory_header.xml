@@ -4,5 +4,5 @@
         <variable
             name="categoryHeaderItem"
             type="co.uk.bbk.culinarycompanion_francispernecita.RecipeViewModel.Recipe"/>
-        />
+    </data>
 </layout>

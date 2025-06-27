@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<data>
     <data
         <variable
             name="recipeItem"
             type="co.uk.bbk.culinarycompanion_francispernecita.RecipeViewModel.Recipe"/>
+    </data>
     <TextView
         android:id="@+id/recipeTitleTextView"
         android:layout_width="match_parent"
