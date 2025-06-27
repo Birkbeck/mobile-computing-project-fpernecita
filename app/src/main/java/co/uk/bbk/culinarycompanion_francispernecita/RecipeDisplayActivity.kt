@@ -78,6 +78,10 @@ class RecipeDisplayActivity : AppCompatActivity() {
                 finish()
                 true
             }
+            R.id.action_delete -> {
+                showDeleteDialog()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -89,12 +93,13 @@ class RecipeDisplayActivity : AppCompatActivity() {
             .create()
 
         dialogBinding.confirmDeleteButton.setOnClickListener {
-            viewModel.deleteRecipe(recipe)
+            viewModel.deleteRecipe(it)
             dialog.dismiss()
             finish()
         }
         dialogBinding.cancelDeleteButton.setOnClickListener {
             dialog.dismiss()
+            finish()
         }
         dialog.show()
     }
