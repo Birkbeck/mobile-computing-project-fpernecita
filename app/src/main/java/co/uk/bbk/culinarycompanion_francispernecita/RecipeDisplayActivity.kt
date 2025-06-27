@@ -17,6 +17,7 @@ class RecipeDisplayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRecipeDisplayBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.title = "Recipe Details"
 
         recipe = intent.getSerializableExtra("recipe", Recipe::class.java) ?: return finish()
 
