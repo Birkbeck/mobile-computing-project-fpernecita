@@ -17,10 +17,6 @@ class AddEditActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAddEditBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        // supportActionBar?.title = "Add/Edit Recipe"
-        // change the title of the action bar depending on whether we are editing or adding a recipe
-        supportActionBar?.title = if (editingRecipe != null) "Edit Recipe" else "Add Recipe"
 
         // Setup categories for spinner
         val categories = listOf("Breakfast", "Brunch", "Lunch", "Dinner", "Desserts", "Other")
@@ -30,8 +26,15 @@ class AddEditActivity : AppCompatActivity() {
         // get DAO
         viewModel.recipesDao = RecipesDatabase.getDatabase(applicationContext).recipesDao()
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         // Check if recipe is an existing one
         editingRecipe = intent.getSerializableExtra("edit_recipe", Recipe::class.java)
+
+        // supportActionBar?.title = "Add/Edit Recipe"
+        // change the title of the action bar depending on whether we are editing or adding a recipe
+        supportActionBar?.title = if (editingRecipe != null) "Edit Recipe" else "Add Recipe"
+
 
         editingRecipe?.let { recipe ->
             binding.recipeTitleEditText.setText(recipe.title)
