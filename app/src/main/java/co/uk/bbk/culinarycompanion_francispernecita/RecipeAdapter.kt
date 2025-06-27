@@ -51,6 +51,13 @@ class RecipeAdapter(
             binding.executePendingBindings()
         }
     }
+    class RecipeViewHolder(
+        private val binding: ItemRecipeBinding
+        private val onClick: (Recipe) -> Unit
+    ) : RecyclerView.ViewHolder(binding.root) {
+
+    }
+
 }
 
 //class RecipeAdapter(
