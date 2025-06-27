@@ -17,41 +17,41 @@
         tools:context=".AddEditActivity">
         <!--    tools:context=".MainActivity">-->
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/iconsContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp">
-            <!-- Navigation action bar-->
-            <!-- Back Button to b changed to a back arrow action button-->
-            <Button
-                android:id="@+id/backButton"
-                android:layout_width="80dp"
-                android:layout_height="48dp"
-                android:text="@string/back"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/iconsContainer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingBottom="8dp">-->
+<!--            &lt;!&ndash; Navigation action bar&ndash;&gt;-->
+<!--            &lt;!&ndash; Back Button to b changed to a back arrow action button&ndash;&gt;-->
+<!--            <Button-->
+<!--                android:id="@+id/backButton"-->
+<!--                android:layout_width="80dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:text="@string/back"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"/>-->
 
-            <!-- Options/Three dots vertical button (⋮ as text) -->
-            <Button
-                android:id="@+id/optionsButton"
-                android:layout_width="50dp"
-                android:layout_height="48dp"
-                android:text="@string/options"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="8dp"/>
+<!--            &lt;!&ndash; Options/Three dots vertical button (⋮ as text) &ndash;&gt;-->
+<!--            <Button-->
+<!--                android:id="@+id/optionsButton"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:text="@string/options"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:layout_marginEnd="8dp"/>-->
 
-            <!-- Save Button -->
-            <Button
-                android:id="@+id/saveButton"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:text="@string/save"
-                app:layout_constraintEnd_toStartOf="@id/optionsButton"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="8dp"/>
+<!--            &lt;!&ndash; Save Button &ndash;&gt;-->
+<!--            <Button-->
+<!--                android:id="@+id/saveButton"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:text="@string/save"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/optionsButton"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:layout_marginEnd="8dp"/>-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         <!--Form layout -->
