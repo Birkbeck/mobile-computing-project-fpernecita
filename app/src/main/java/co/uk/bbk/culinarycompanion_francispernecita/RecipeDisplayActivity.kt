@@ -17,6 +17,7 @@ class RecipeDisplayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRecipeDisplayBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // up button to go back to the main activity
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Recipe Details"
 
@@ -61,5 +62,10 @@ class RecipeDisplayActivity : AppCompatActivity() {
             dialog.dismiss()
         }
         dialog.show()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }
