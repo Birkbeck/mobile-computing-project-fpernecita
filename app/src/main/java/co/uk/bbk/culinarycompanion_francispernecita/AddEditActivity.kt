@@ -35,7 +35,7 @@ class AddEditActivity : AppCompatActivity() {
         // change the title of the action bar depending on whether we are editing or adding a recipe
         supportActionBar?.title = if (editingRecipe != null) "Edit Recipe" else "Add Recipe"
 
-
+        // populate the fields with the recipe details if editing recipe contents
         editingRecipe?.let { recipe ->
             binding.recipeTitleEditText.setText(recipe.title)
             binding.descriptionEditText.setText(recipe.description)
