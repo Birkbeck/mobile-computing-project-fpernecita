@@ -48,7 +48,6 @@ class RecipeAdapter(
             RecyclerView.ViewHolder(binding.root) {
         fun bind(category: String) {
             binding.category = category
-            binding.executePendingBindings()
         }
     }
     class RecipeViewHolder(
