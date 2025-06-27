@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
+        supportActionBar?.title = "Culinary Companion"
+
 
         val adapter = RecipeAdapter { selectedRecipe ->
             val intent = Intent(this, RecipeDisplayActivity::class.java)
