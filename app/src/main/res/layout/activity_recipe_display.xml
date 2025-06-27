@@ -24,9 +24,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"/>
-            <!-- Static Mock Data -->
-            <!-- Mock Data Source: https://www.bbcgoodfood.com/recipes/fluffy-pancakes  -->
-            <!-- Recipe Title -->
+
             <TextView
                 android:id="@+id/recipeTitleTextView"
                 android:layout_width="match_parent"
