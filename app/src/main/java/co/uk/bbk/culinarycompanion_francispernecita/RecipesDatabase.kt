@@ -22,9 +22,8 @@ abstract class RecipesDatabase : RoomDatabase() {
                     "recipes_database"
                 )
                     // Wipes and rebuilds instead of migrating if no Migration object.
-                    .fallbackToDestructiveMigration()
+                    .fallbackToDestructiveMigration(true)
                     .build()
-                    .also { INSTANCE = it }
             }
         }
     }
