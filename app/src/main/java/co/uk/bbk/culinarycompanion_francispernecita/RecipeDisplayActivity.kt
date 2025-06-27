@@ -56,23 +56,6 @@ class RecipeDisplayActivity : AppCompatActivity() {
         binding.instructionsTextView.text = recipe.instructions
     }
 
-    private fun showDeleteDialog() {
-        val dialogBinding = DialogConfirmDeleteBinding.inflate(layoutInflater)
-        val dialog = AlertDialog.Builder(this)
-            .setView(dialogBinding.root)
-            .create()
-
-        dialogBinding.confirmDeleteButton.setOnClickListener {
-            viewModel.deleteRecipe(recipe)
-            dialog.dismiss()
-            finish()
-        }
-        dialogBinding.cancelDeleteButton.setOnClickListener {
-            dialog.dismiss()
-        }
-        dialog.show()
-    }
-
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
@@ -99,5 +82,21 @@ class RecipeDisplayActivity : AppCompatActivity() {
         }
     }
 
+    private fun showDeleteDialog() {
+        val dialogBinding = DialogConfirmDeleteBinding.inflate(layoutInflater)
+        val dialog = AlertDialog.Builder(this)
+            .setView(dialogBinding.root)
+            .create()
+
+        dialogBinding.confirmDeleteButton.setOnClickListener {
+            viewModel.deleteRecipe(recipe)
+            dialog.dismiss()
+            finish()
+        }
+        dialogBinding.cancelDeleteButton.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
+    }
 
 }
