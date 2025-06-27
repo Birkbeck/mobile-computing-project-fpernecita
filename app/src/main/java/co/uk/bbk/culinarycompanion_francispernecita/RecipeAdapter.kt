@@ -43,6 +43,14 @@ class RecipeAdapter(
             is RecipeListItem.RecipeItem -> (holder as RecipeViewHolder).bind(item.recipe)
         }
     }
+
+    class CategoryHeaderViewHolder(private val binding: ItemCategoryHeaderBinding) :
+            RecyclerView.ViewHolder(binding.root) {
+        fun bind(category: String) {
+            binding.category = category
+            binding.executePendingBindings()
+        }
+    }
 }
 
 //class RecipeAdapter(
