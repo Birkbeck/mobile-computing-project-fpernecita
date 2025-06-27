@@ -47,7 +47,7 @@ class RecipeAdapter(
     class CategoryHeaderViewHolder(private val binding: ItemCategoryHeaderBinding) :
             RecyclerView.ViewHolder(binding.root) {
         fun bind(category: String) {
-            binding.category = category
+            binding.category = "category"
         }
     }
     class RecipeViewHolder(
