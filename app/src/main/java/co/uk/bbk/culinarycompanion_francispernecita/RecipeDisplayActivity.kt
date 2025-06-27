@@ -8,6 +8,10 @@ import androidx.appcompat.app.AlertDialog
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityRecipeDisplayBinding
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.DialogConfirmDeleteBinding
 
+import android.view.Menu
+import android.view.MenuItem
+
+
 class RecipeDisplayActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRecipeDisplayBinding
     private val viewModel: RecipeViewModel by viewModels()
@@ -68,4 +72,27 @@ class RecipeDisplayActivity : AppCompatActivity() {
         finish()
         return true
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.recipe_display_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_edit -> {
+                val intent = Intent(this, AddEditActivity::class.java)
+                intent.putExtra("edit_recipe", recipe)
+                startActivity(intent)
+                true
+            }
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+
 }
