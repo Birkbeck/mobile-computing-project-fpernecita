@@ -29,11 +29,14 @@ class RecipeAdapter(
                 val binding = ItemCategoryHeaderBinding.inflate(inflater, parent, false)
                 CategoryHeaderViewHolder(binding)
             }
+
             else -> {
                 val binding = ItemRecipeBinding.inflate(inflater, parent, false)
                 RecipeViewHolder(binding)
             }
+        }
     }
+
 }
 
 //class RecipeAdapter(
