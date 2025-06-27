@@ -12,7 +12,7 @@ class RecipeAdapter(
 
     companion object {
         private const val VIEW_TYPE_HEADER = 0
-        private const val VIEW_TYPE_RECIPE = 1
+        private const val VIEW_TYPE_ITEM = 1
     }
 }
 
