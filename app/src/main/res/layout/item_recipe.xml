@@ -2,7 +2,13 @@
 <layout>
     <data
         <variable
-            name="recipeCategory"
+            name="recipeItem"
             type="co.uk.bbk.culinarycompanion_francispernecita.RecipeViewModel.RecipeCategory"/>
-
+    <TextView
+        android:id="@+id/recipeTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{recipeItem.recipe}"
+        android:textSize="16sp"
+        android:padding="16dp"/>
 </layout>
