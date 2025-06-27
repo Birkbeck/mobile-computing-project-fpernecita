@@ -6,7 +6,7 @@
     <data>
 
         <variable
-            name="recipe"
+            name="recipeItem"
             type="co.uk.bbk.culinarycompanion_francispernecita.Recipe"/>
 
     </data>

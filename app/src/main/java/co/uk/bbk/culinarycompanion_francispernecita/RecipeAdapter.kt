@@ -56,7 +56,8 @@ class RecipeAdapter(
         private val onClick: (Recipe) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(recipe: Recipe) {
-            binding.recipeTitleTextView.text = recipe.title
+            binding.recipeItem = recipe
+            binding.executePendingBindings()
             binding.root.setOnClickListener {
                 onClick(recipe)
             }
