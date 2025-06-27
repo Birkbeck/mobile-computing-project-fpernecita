@@ -5,4 +5,13 @@
             name="categoryHeaderItem"
             type="co.uk.bbk.culinarycompanion_francispernecita.Recipe"/>
     </data>
+
+    <TextView
+    android:id="@+id/categoryTitleTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@{categoryHeaderItem.title}"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:padding="12dp"/>
 </layout>
