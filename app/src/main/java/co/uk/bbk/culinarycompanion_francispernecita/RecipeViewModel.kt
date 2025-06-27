@@ -60,4 +60,11 @@ class RecipeViewModel: ViewModel() {
             }
         }
     }
+
+    data class RecipeCategory(
+        val category: String,
+        val recipes: List<Recipe>
+    )
+
+
 }
