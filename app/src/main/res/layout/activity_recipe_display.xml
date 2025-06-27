@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- A static mock layout for the displaying the recipe -->
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
 
         <variable
@@ -25,8 +23,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
             <!-- Static Mock Data -->
             <!-- Mock Data Source: https://www.bbcgoodfood.com/recipes/fluffy-pancakes  -->
             <!-- Recipe Title -->
