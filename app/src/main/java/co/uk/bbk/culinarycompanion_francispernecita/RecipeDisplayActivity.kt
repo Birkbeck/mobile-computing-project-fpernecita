@@ -41,6 +41,11 @@ class RecipeDisplayActivity : AppCompatActivity() {
             showDeleteDialog()
         }
 
+        binding.addRecipeButton.setOnClickListener {
+            val intent = Intent(this, AddEditActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun bindRecipeDetails() {
