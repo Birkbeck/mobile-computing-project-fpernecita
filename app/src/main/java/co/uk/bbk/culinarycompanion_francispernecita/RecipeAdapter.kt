@@ -3,7 +3,8 @@ package co.uk.bbk.culinarycompanion_francispernecita
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import co.uk.bbk.culinarycompanion_francispernecita.databinding.RecipeItemBinding
+import co.uk.bbk.culinarycompanion_francispernecita.databinding.ItemRecipeBinding
+import co.uk.bbk.culinarycompanion_francispernecita.databinding.ItemCategoryHeaderBinding
 
 
 
