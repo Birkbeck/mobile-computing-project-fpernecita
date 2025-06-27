@@ -76,4 +76,9 @@ class AddEditActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
+    }
 }
