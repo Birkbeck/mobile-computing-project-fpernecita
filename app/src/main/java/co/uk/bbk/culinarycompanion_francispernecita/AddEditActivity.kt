@@ -2,6 +2,7 @@ package co.uk.bbk.culinarycompanion_francispernecita
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -87,7 +88,7 @@ class AddEditActivity : AppCompatActivity() {
         return true
     }
 
-    onCreateOptionsMenu(menu: Menu): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.add_edit_menu, menu)
         return true
     }
