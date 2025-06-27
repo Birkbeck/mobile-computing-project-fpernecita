@@ -17,6 +17,7 @@ class AddEditActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAddEditBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Add/Edit Recipe"
 
         // Setup categories for spinner
