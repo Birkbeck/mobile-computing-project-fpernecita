@@ -76,6 +76,11 @@ class RecipeDisplayActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.readAllRecipes()
+    }
+
     private fun showDeleteDialog() {
         val dialogBinding = DialogConfirmDeleteBinding.inflate(layoutInflater)
         val dialog = AlertDialog.Builder(this)
