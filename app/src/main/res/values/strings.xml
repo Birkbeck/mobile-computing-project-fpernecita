@@ -17,6 +17,7 @@
     <string name="confirm">Confirm</string>
 
     <string name="action_edit">Edit</string>
+    <string name="action_save">Save</string>
     <string name="action_delete">Delete</string>
 
     <string name="title_label">Title</string>
