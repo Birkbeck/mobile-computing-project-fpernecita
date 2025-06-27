@@ -38,12 +38,14 @@ class RecipeDisplayActivity : AppCompatActivity() {
 
     }
 
-    private fun bindRecipeDetails() {
-        binding.recipeTitleTextView.text = recipe.title
-        binding.categoryTextView.text = recipe.category
-        binding.descriptionTextView.text = recipe.description
-        binding.ingredientsTextView.text = recipe.ingredients
-        binding.instructionsTextView.text = recipe.instructions
+    override fun onResume() {
+        super.onResume()
+        viewModel.observeRecipeById(recipe.id)?.observe(this) { updatedRecipe ->
+            if (updatedRecipe != null) {
+                recipe = updatedRecipe
+                bindRecipeDetails()
+            }
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -76,11 +78,6 @@ class RecipeDisplayActivity : AppCompatActivity() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        viewModel.readAllRecipes()
-    }
-
     private fun showDeleteDialog() {
         val dialogBinding = DialogConfirmDeleteBinding.inflate(layoutInflater)
         val dialog = AlertDialog.Builder(this)
@@ -98,5 +95,15 @@ class RecipeDisplayActivity : AppCompatActivity() {
         }
         dialog.show()
     }
+
+
+    private fun bindRecipeDetails() {
+        binding.recipeTitleTextView.text = recipe.title
+        binding.categoryTextView.text = recipe.category
+        binding.descriptionTextView.text = recipe.description
+        binding.ingredientsTextView.text = recipe.ingredients
+        binding.instructionsTextView.text = recipe.instructions
+    }
+
 
 }
