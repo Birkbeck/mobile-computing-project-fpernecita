@@ -32,7 +32,7 @@ class RecipeAdapter(
 
             else -> {
                 val binding = ItemRecipeBinding.inflate(inflater, parent, false)
-                RecipeViewHolder(binding)
+                RecipeViewHolder(binding, onClick)
             }
         }
     }
