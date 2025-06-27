@@ -7,8 +7,10 @@ import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityAddEditBinding
+import co.uk.bbk.culinarycompanion_francispernecita.databinding.DialogConfirmDeleteBinding
 
 class AddEditActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddEditBinding
@@ -101,12 +103,31 @@ class AddEditActivity : AppCompatActivity() {
             }
 
             R.id.action_delete -> {
-                val intent = Intent(this, DialogConfirmDeleteBinding::class.java)
-                startActivity(intent)
+                showDeleteDialog()
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun showDeleteDialog() {
+        val dialogBinding = DialogConfirmDeleteBinding.inflate(layoutInflater)
+        val dialog = AlertDialog.Builder(this)
+            .setView(dialogBinding.root)
+            .create()
+
+        dialogBinding.confirmDeleteButton.setOnClickListener {
+            editingRecipe?.let {
+                viewModel.deleteRecipe(it)
+                dialog.dismiss()
+                finish()
+            }
+        }
+        dialogBinding.cancelDeleteButton.setOnClickListener {
+            dialog.dismiss()
+            finish()
+        }
+        dialog.show()
     }
 
 }
