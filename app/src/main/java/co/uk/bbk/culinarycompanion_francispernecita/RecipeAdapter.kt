@@ -6,7 +6,11 @@ import androidx.recyclerview.widget.RecyclerView
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ItemRecipeBinding
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ItemCategoryHeaderBinding
 
+class RecipeAdapter(
+    private val onClick: (Recipe) -> Unit
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>(RecipeItemDiffCallback) {
 
+}
 
 //class RecipeAdapter(
 //    private var recipes: List<Recipe> = listOf(),
