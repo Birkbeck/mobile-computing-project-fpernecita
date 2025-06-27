@@ -1,6 +1,8 @@
 package co.uk.bbk.culinarycompanion_francispernecita
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -83,5 +85,21 @@ class AddEditActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_save -> {
+                binding.saveButton.performClick()
+                true
+            }
+
+            R.id.action_delete -> {
+                val intent = Intent(this, DialogConfirmDeleteBinding::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
