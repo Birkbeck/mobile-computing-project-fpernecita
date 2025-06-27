@@ -87,6 +87,11 @@ class AddEditActivity : AppCompatActivity() {
         return true
     }
 
+    onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.add_edit_menu, menu)
+        return true
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_save -> {
@@ -102,4 +107,6 @@ class AddEditActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    private fun
 }
