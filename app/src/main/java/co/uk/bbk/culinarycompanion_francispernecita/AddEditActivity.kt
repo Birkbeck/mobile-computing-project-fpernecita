@@ -79,6 +79,11 @@ class AddEditActivity : AppCompatActivity() {
                 showDeleteDialog()
                 true
             }
+
+            android.R.id.home -> {
+                finish()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
