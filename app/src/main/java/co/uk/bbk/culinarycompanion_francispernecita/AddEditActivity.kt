@@ -52,10 +52,6 @@ class AddEditActivity : AppCompatActivity() {
                 binding.categorySpinner.setSelection(categoryIndex)
             }
         }
-
-        binding.backButton.setOnClickListener {
-            finish()
-        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
