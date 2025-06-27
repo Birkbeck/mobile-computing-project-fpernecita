@@ -40,7 +40,7 @@ class RecipeDisplayActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.observeRecipeById(recipe.id)?.observe(this) { updatedRecipe ->
+        viewModel.observeRecipeById(recipe.id.toLong())?.observe(this) { updatedRecipe ->
             if (updatedRecipe != null) {
                 recipe = updatedRecipe
                 bindRecipeDetails()
