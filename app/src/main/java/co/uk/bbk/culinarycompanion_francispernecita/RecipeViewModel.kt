@@ -61,6 +61,10 @@ class RecipeViewModel: ViewModel() {
         }
     }
 
+    fun observeRecipeById(recipeId: Long): LiveData<Recipe> {
+        return recipesDao?.observeRecipeById(recipeId)
+    }
+
     data class RecipeCategory(
         val category: String,
         val recipes: List<Recipe>
