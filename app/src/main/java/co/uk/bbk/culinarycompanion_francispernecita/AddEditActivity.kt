@@ -18,7 +18,9 @@ class AddEditActivity : AppCompatActivity() {
         binding = ActivityAddEditBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Add/Edit Recipe"
+        // supportActionBar?.title = "Add/Edit Recipe"
+        // change the title of the action bar depending on whether we are editing or adding a recipe
+        supportActionBar?.title = if (editingRecipe != null) "Edit Recipe" else "Add Recipe"
 
         // Setup categories for spinner
         val categories = listOf("Breakfast", "Brunch", "Lunch", "Dinner", "Desserts", "Other")
