@@ -65,6 +65,15 @@ class RecipeViewModel: ViewModel() {
         val category: String,
         val recipes: List<Recipe>
     )
-
-
+    // Group recipes by category
+    companion object {
+        fun groupRecipesByCategory(recipes: List<Recipe>): List<RecipeCategory> {
+            return recipes
+                .groupBy { it.category }
+                .map { (category, recipesInCategory) ->
+                    RecipeCategory(category, recipesInCategory)
+                }
+                .sortedBy { it.category }
+        }
+    }
 }
