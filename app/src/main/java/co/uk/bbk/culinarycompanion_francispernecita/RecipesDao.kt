@@ -20,4 +20,7 @@ interface RecipesDao {
     @Delete
     suspend fun deleteRecipe(recipe: Recipe)
 
+    @Query("SELECT * FROM recipe WHERE id = :recipeId")
+    fun observeRecipeById(recipeId: Long): LiveData<Recipe>
+
 }
