@@ -10,6 +10,10 @@ class RecipeAdapter(
     private val onClick: (Recipe) -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>(RecipeItemDiffCallback) {
 
+    companion object {
+        private const val VIEW_TYPE_HEADER = 0
+        private const val VIEW_TYPE_RECIPE = 1
+    }
 }
 
 //class RecipeAdapter(
