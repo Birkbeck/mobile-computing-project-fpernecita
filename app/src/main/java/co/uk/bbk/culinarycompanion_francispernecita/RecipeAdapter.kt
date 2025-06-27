@@ -21,6 +21,15 @@ class RecipeAdapter(
             is RecipeListItem.RecipeItem -> VIEW_TYPE_ITEM
         }
     }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        return when (viewType) {
+            VIEW_TYPE_HEADER -> {
+                val binding = ItemCategoryHeaderBinding.inflate(inflater, parent, false)
+                CategoryHeaderViewHolder(binding)
+            }
+    }
 }
 
 //class RecipeAdapter(
