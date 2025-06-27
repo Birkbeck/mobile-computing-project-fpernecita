@@ -8,7 +8,7 @@ import co.uk.bbk.culinarycompanion_francispernecita.databinding.ItemCategoryHead
 
 class RecipeAdapter(
     private val onClick: (Recipe) -> Unit
-) : RecyclerView.Adapter<RecyclerView.ViewHolder>(RecipeItemDiffCallback) {
+) : androidx.recyclerview.widget.ListAdapter<RecipeListItem, RecyclerView.ViewHolder>(RecipeItemDiffCallback())
 
     companion object {
         private const val VIEW_TYPE_HEADER = 0
