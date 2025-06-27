@@ -37,6 +37,12 @@ class RecipeAdapter(
         }
     }
 
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        when (val item = getItem(position)) {
+            is RecipeListItem.CategoryHeader -> (holder as CategoryHeaderViewHolder).bind(item.category)
+            is RecipeListItem.RecipeItem -> (holder as RecipeViewHolder).bind(item.recipe)
+        }
+    }
 }
 
 //class RecipeAdapter(
