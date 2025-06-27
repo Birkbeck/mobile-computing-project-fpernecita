@@ -113,7 +113,7 @@ class AddEditActivity : AppCompatActivity() {
 
             if (title.isEmpty() || description.isEmpty() || ingredients.isEmpty() || instructions.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+                return
             }
 
             if (editingRecipe == null) {
