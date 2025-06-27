@@ -93,7 +93,7 @@ class RecipeDisplayActivity : AppCompatActivity() {
             .create()
 
         dialogBinding.confirmDeleteButton.setOnClickListener {
-            viewModel.deleteRecipe(it)
+            viewModel.deleteRecipe(recipe)
             dialog.dismiss()
             finish()
         }
