@@ -16,6 +16,9 @@
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
 
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+
     <string name="title_label">Title</string>
     <string name="select_category_label">Category</string>
     <string name="description_label">Description</string>
