@@ -26,43 +26,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-
-            <!-- Top Action Bar -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="8dp">
-
-                <!-- Back Button to b changed to a back arrow action button  -->
-                <Button
-                    android:id="@+id/backButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:text="@string/back"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-                <!-- Options Button (⋮ as text) -->
-                <Button
-                    android:id="@+id/optionsButton"
-                    android:layout_width="50dp"
-                    android:layout_height="48dp"
-                    android:text="@string/options"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginEnd="8dp"/>
-
-                <!-- Edit Button -->
-                <Button
-                    android:id="@+id/editButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:text="@string/edit"
-                    app:layout_constraintEnd_toStartOf="@id/optionsButton"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginEnd="8dp"/>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
             <!-- Static Mock Data -->
             <!-- Mock Data Source: https://www.bbcgoodfood.com/recipes/fluffy-pancakes  -->
