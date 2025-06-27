@@ -61,7 +61,7 @@ class RecipeViewModel: ViewModel() {
         }
     }
 
-    fun observeRecipeById(recipeId: Long): LiveData<Recipe> {
+    fun observeRecipeById(recipeId: Long): LiveData<Recipe>? {
         return recipesDao?.observeRecipeById(recipeId)
     }
 
