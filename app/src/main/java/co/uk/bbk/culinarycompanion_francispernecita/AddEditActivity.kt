@@ -130,9 +130,4 @@ class AddEditActivity : AppCompatActivity() {
         }
         finish()
     }
-
-    override fun onResume() {
-        super.onResume()
-        viewModel.readAllRecipes()
-    }
 }
