@@ -52,7 +52,8 @@ class MainActivity : AppCompatActivity() {
         // trigger readAllRecipes()
         viewModel.readAllRecipes()
         viewModel.recipes.observe(this) { recipes ->
-            adapter.updateRecipes(recipes)
+            val groupedRecipes = viewModel.groupRecipesByCategory(recipes)
+
         }
     }
 
