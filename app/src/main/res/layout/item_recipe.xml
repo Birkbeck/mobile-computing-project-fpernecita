@@ -3,7 +3,7 @@
     <data
         <variable
             name="recipeItem"
-            type="co.uk.bbk.culinarycompanion_francispernecita.RecipeViewModel.RecipeCategory"/>
+            type="co.uk.bbk.culinarycompanion_francispernecita.RecipeViewModel.Recipe"/>
     <TextView
         android:id="@+id/recipeTitleTextView"
         android:layout_width="match_parent"
