@@ -60,6 +60,11 @@ class MainActivity : AppCompatActivity() {
 //                listOf(RecipeListItem.CategoryHeader(categoryGroup.category)) +
 //                categoryGroup.recipes.map { RecipeListItem.RecipeItem(it) }
 //            }
+            val flattenedRecipeList = mutableListOf<RecipeListItem>()
+            allCategories.forEach { category ->
+                flattenedRecipeList.add(RecipeListItem.CategoryHeader(category))
+
+
 
             adapter.submitList(flattenedRecipeList)
         }
