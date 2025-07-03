@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         // enableEdgeToEdge()
         setContentView(binding.root)
+        // hide the action bar - enabled in the other activities
+        supportActionBar?.hide()
+
 
         val adapter = RecipeAdapter { selectedRecipe ->
             val intent = Intent(this, RecipeDisplayActivity::class.java)
