@@ -31,7 +31,7 @@
                 android:id="@+id/recipeTitleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/recipe_name_text_view2"
+                android:text="@string/recipe_name_text_view"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp" />
