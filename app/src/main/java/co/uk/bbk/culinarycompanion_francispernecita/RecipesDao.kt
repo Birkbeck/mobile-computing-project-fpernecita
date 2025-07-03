@@ -25,4 +25,7 @@ interface RecipesDao {
     @Query("SELECT * FROM recipe WHERE id = :recipeId")
     fun observeRecipeById(recipeId: Long): LiveData<Recipe>
 
+    @Query("SELECT * FROM recipe WHERE id = :recipeId")
+    suspend fun getRecipeById(recipeId: Long): Recipe?
+
 }
