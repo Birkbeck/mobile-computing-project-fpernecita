@@ -23,7 +23,7 @@ class AddEditActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Setup categories for spinner
-        val categories = listOf("Breakfast", "Brunch", "Lunch", "Dinner", "Desserts", "Other")
+        val categories = resources.getStringArray(R.array.recipe_categories).toList()
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, categories)
         binding.categorySpinner.adapter = spinnerAdapter
 
