@@ -41,6 +41,12 @@ class RecipeViewModel: ViewModel() {
             }
         }
     }
+
+    // Add a new recipe to the database and return its ID
+    suspend fun addRecipeAndReturnId(recipe: Recipe): Long {
+        return recipesDao?.insertRecipe(recipe) ?: -1
+    }
+
     // Update an existing recipe in the database
     fun editRecipe(recipe: Recipe) {
         viewModelScope.launch {
