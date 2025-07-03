@@ -129,8 +129,18 @@ class AddEditActivity : AppCompatActivity() {
                 ingredients = ingredients,
                 instructions = instructions
             )
+            lifecycleScope.launch {
+                val recipeId = dao?.insertRecipe(newRecipe)
+                if (recipeId != null && recipeId != -1L) {
+                    val insertedRecipe = dao.getRecipeById(recipeId)
+                    if (insertedRecipe != null) {
+                        val intent = Intent(this@AddEditActivity, RecipeDisplayActivity::class.java)
+                        intent.putExtra("recipe", insertedRecipe)
+                        startActivity(intent)
+                    }
+                }
 
-            finish()
+                finish()
             }
         } else {
             val updatedRecipe = editingRecipe!!.copy(
