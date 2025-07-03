@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.activity.viewModels
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityMainBinding
 
@@ -29,7 +30,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.recipeRecyclerView.layoutManager = LinearLayoutManager(this)
+        // binding.recipeRecyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recipeRecyclerView.layoutManager = GridLayoutManager(this, 2)
         binding.recipeRecyclerView.adapter = adapter
 
         binding.addRecipeButton.setOnClickListener {
