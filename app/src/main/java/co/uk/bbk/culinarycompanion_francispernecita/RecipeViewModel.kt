@@ -42,10 +42,10 @@ class RecipeViewModel: ViewModel() {
         }
     }
 
-    // Add a new recipe to the database and return its ID
-    suspend fun addRecipeAndReturnId(recipe: Recipe): Long {
-        return recipesDao?.insertRecipe(recipe) ?: -1
-    }
+//    // Add a new recipe to the database and return its ID
+//    suspend fun addRecipeAndReturnId(recipe: Recipe): Long {
+//        return recipesDao?.insertRecipe(recipe) ?: -1
+//    }
 
     // Update an existing recipe in the database
     fun editRecipe(recipe: Recipe) {
@@ -76,15 +76,15 @@ class RecipeViewModel: ViewModel() {
         val category: String,
         val recipes: List<Recipe>
     )
-    // Group recipes by category
-    companion object {
-        fun groupRecipesByCategory(recipes: List<Recipe>): List<RecipeCategory> {
-            return recipes
-                .groupBy { it.category }
-                .map { (category, recipesInCategory) ->
-                    RecipeCategory(category, recipesInCategory)
-                }
-                .sortedBy { it.category }
-        }
-    }
+//    // Group recipes by category
+//    companion object {
+//        fun groupRecipesByCategory(recipes: List<Recipe>): List<RecipeCategory> {
+//            return recipes
+//                .groupBy { it.category }
+//                .map { (category, recipesInCategory) ->
+//                    RecipeCategory(category, recipesInCategory)
+//                }
+//                .sortedBy { it.category }
+//        }
+//    }
 }
