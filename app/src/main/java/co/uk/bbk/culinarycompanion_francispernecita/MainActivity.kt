@@ -55,11 +55,12 @@ class MainActivity : AppCompatActivity() {
             val allCategories = resources.getStringArray(R.array.recipe_categories).toList()
             val groupedMap = recipes.groupBy { it.category }
 
-            val groupedRecipes = RecipeViewModel.groupRecipesByCategory(recipes)
-            val flattenedRecipeList = groupedRecipes.flatMap { categoryGroup ->
-                listOf(RecipeListItem.CategoryHeader(categoryGroup.category)) +
-                categoryGroup.recipes.map { RecipeListItem.RecipeItem(it) }
-            }
+//             val groupedRecipes = RecipeViewModel.groupRecipesByCategory(recipes)
+//            val flattenedRecipeList = groupedRecipes.flatMap { categoryGroup ->
+//                listOf(RecipeListItem.CategoryHeader(categoryGroup.category)) +
+//                categoryGroup.recipes.map { RecipeListItem.RecipeItem(it) }
+//            }
+
             adapter.submitList(flattenedRecipeList)
         }
     }
