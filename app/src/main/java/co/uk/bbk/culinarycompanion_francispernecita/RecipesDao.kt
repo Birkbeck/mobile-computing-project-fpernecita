@@ -14,7 +14,7 @@ interface RecipesDao {
     suspend fun getAllRecipes(): List<Recipe>
 
     @Insert
-    suspend fun insertRecipe(recipe: Recipe)
+    suspend fun insertRecipe(recipe: Recipe): Long
 
     @Update
     suspend fun updateRecipe(recipe: Recipe)
