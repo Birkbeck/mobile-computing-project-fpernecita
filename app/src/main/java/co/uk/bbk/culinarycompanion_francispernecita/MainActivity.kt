@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
             allCategories.forEach { category ->
                 flattenedRecipeList.add(RecipeListItem.CategoryHeader(category))
 
+            val recipesInCategory = groupedMap[category] ?: emptyList()
 
 
             adapter.submitList(flattenedRecipeList)
