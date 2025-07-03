@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityAddEditBinding
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.DialogConfirmDeleteBinding
 import android.content.Intent
-import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 
