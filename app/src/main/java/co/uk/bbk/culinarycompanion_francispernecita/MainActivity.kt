@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         // trigger readAllRecipes()
         viewModel.readAllRecipes()
         viewModel.recipes.observe(this) { recipes ->
-            val allCategories = listOf("Breakfast", "Brunch", "Lunch", "Dinner", "Desserts", "Other")
+            val allCategories = resources.getStringArray(R.array.recipe_categories).toList()
 
             val groupedRecipes = RecipeViewModel.groupRecipesByCategory(recipes)
             val flattenedRecipeList = groupedRecipes.flatMap { categoryGroup ->
