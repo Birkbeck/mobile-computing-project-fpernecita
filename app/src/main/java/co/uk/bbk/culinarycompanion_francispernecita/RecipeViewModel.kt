@@ -19,7 +19,8 @@ class RecipeViewModel: ViewModel() {
                 val recipes = it.getAllRecipes()
 
                 Log.i("Recipe", recipes.toString())
-                _recipes.value = recipes
+                // _recipes.value = recipes
+                _recipes.postValue(recipes.map { it.copy() })
             }
         }
     }
