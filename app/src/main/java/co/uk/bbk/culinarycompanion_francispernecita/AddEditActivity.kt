@@ -10,6 +10,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityAddEditBinding
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.DialogConfirmDeleteBinding
+import android.content.Intent
+import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 
 class AddEditActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddEditBinding
@@ -115,6 +119,7 @@ class AddEditActivity : AppCompatActivity() {
             return
         }
 
+        val dao = viewModel.recipesDao
         if (editingRecipe == null) {
             viewModel.addRecipe(title, category, description, ingredients, instructions)
 
@@ -127,7 +132,7 @@ class AddEditActivity : AppCompatActivity() {
                 instructions = instructions
             )
             viewModel.editRecipe(updatedRecipe)
+            finish()
         }
-        finish()
     }
 }
