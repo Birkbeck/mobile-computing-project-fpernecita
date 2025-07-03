@@ -3,7 +3,7 @@ package co.uk.bbk.culinarycompanion_francispernecita
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.activity.viewModels
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityMainBinding
@@ -69,7 +69,11 @@ class MainActivity : AppCompatActivity() {
                     flattenedRecipeList.add(RecipeListItem.RecipeItem(recipe))
                 }
             }
+            // Clear the adapter before submitting the new list
+            adapter.submitList(null)
+            // Submit the new list to the adapter
             adapter.submitList(flattenedRecipeList)
+            Log.d("MainActivity", "Recipes received: $recipes")
         }
     }
 
