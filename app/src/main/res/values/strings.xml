@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">CulinaryCompanion_FrancisPernecita</string>
     <string name="app_title">Culinary Companion</string>
-    <string name="recipe_name_text_view1">Ham Sandwich</string>
-    <string name="recipe_name_text_view2">Fluffy Pancakes</string>
-    <string name="recipe_name_text_view3">Wholewheat granola</string>
-    <string name="recipe_name_text_view4">English Breaakfast</string>
+    <string name="recipe_name_text_view">Ham Sandwich</string>
     <string name="recipe_category_text_view">Breakfast</string>
 
     <string name="back">Back</string>
