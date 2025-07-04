@@ -5,16 +5,21 @@
             name="category"
             type="String"/>
     </data>
+    <FrameLayout
+        android:layout_width=""
+        android:layout_height="80dp">
 
-    <TextView
-        android:id="@+id/categoryTitleTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@{category}"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="12dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/categoryTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{category}"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+    </FrameLayout>
 </layout>
