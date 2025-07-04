@@ -51,6 +51,12 @@ class RecipeAdapter(
 
             // Set the image resource based on the category
             val imageRes = when (category.lowercase()) {
+                "breakfast" -> R.drawable.category_breakfast
+                "brunch" -> R.drawable.category_brunch
+                "lunch" -> R.drawable.category_lunch
+                "dinner" -> R.drawable.category_dinner
+                "desserts" -> R.drawable.category_desserts
+                "other" -> R.drawable.category_other
                 else -> R.drawable.category_image_placeholder
             }
 
