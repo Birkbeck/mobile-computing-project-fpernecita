@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val layoutManager = GridLayoutManager(this, spanCount)
 
         layoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
-
+            
         }
 
         binding.recipeRecyclerView.layoutManager = layoutManager
