@@ -44,6 +44,8 @@ class AddEditActivity : AppCompatActivity() {
 
         // populate the fields with the recipe details if editing recipe contents
         editingRecipe?.let { recipe ->
+            binding.recipe = recipe
+
             binding.recipeTitleEditText.setText(recipe.title)
             binding.descriptionEditText.setText(recipe.description)
             binding.ingredientsEditText.setText(recipe.ingredients)
