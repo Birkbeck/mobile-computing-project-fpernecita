@@ -63,10 +63,6 @@ class RecipeAdapter(
             }
         }
     }
-    companion object {
-        const val VIEW_TYPE_HEADER = 0
-        const val VIEW_TYPE_ITEM = 1
-    }
 }
 
 //class RecipeAdapter(
