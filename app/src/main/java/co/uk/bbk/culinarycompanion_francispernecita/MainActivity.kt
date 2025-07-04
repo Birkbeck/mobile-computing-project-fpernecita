@@ -34,6 +34,13 @@ class MainActivity : AppCompatActivity() {
         // binding.recipeRecyclerView.layoutManager = LinearLayoutManager(this)
         // binding.recipeRecyclerView.layoutManager = GridLayoutManager(this, 2)
 
+        val spanCount = 2 // Number of columns in the grid
+        val layoutManager = GridLayoutManager(this, spanCount)
+
+        layoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+
+        }
+
         binding.recipeRecyclerView.layoutManager = layoutManager
         binding.recipeRecyclerView.adapter = adapter
 
