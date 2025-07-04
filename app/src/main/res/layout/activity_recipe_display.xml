@@ -36,6 +36,13 @@
                 android:textStyle="bold"
                 android:layout_marginTop="8dp" />
 
+            <ImageView
+                android:id="@+id/categoryImageView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"/>
+
+
             <!-- Category -->
             <TextView
                 android:id="@+id/categoryTextView"
