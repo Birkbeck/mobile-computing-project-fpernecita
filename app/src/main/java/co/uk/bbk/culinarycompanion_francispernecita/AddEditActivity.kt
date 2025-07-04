@@ -122,7 +122,6 @@ class AddEditActivity : AppCompatActivity() {
 
         val dao = viewModel.recipesDao
         if (editingRecipe == null) {
-            viewModel.addRecipe(title, category, description, ingredients, instructions)
             val newRecipe = Recipe(
                 title = title,
                 category = category,
