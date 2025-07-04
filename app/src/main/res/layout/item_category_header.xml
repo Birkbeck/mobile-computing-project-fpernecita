@@ -9,6 +9,20 @@
         android:layout_width="match_parent"
         android:layout_height="80dp">
 
+        <ImageView
+            android:id="@+id/categoryImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/category_image_placeholder"
+            />
+
+        <View
+            android:id="@+id/categoryBackgroundV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000"/>
+
 
         <TextView
             android:id="@+id/categoryTitleTextView"
