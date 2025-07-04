@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.activity.viewModels
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityMainBinding
+import co.uk.bbk.culinarycompanion_francispernecita.RecipeAdapter
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,11 +35,16 @@ class MainActivity : AppCompatActivity() {
         // binding.recipeRecyclerView.layoutManager = LinearLayoutManager(this)
         // binding.recipeRecyclerView.layoutManager = GridLayoutManager(this, 2)
 
-        val spanCount = 2 // Number of columns in the grid
-        val layoutManager = GridLayoutManager(this, spanCount)
+        val layoutManager = GridLayoutManager(this, 2)
 
         layoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
-            
+            override fun getSpanSize(position: Int): Int {
+                return when (adapter.getItemViewType(position)) {
+                    RecipeAdapter.VIEW_TYPE_HEADER -> 2
+                    RecipeAdapter.VIEW_TYPE_ITEM -> 1
+                    else -> 1
+                }
+            }
         }
 
         binding.recipeRecyclerView.layoutManager = layoutManager
@@ -93,5 +99,4 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         viewModel.readAllRecipes()
     }
-
 }
