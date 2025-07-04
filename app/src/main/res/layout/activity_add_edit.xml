@@ -23,6 +23,7 @@
             android:text="@string/title_label"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:inputType="text"
             android:layout_marginTop="16dp"/>
 
         <!-- Recipe Title Input -->
