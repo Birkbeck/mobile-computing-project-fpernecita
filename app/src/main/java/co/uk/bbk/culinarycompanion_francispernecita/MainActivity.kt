@@ -30,8 +30,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         // binding.recipeRecyclerView.layoutManager = LinearLayoutManager(this)
-        binding.recipeRecyclerView.layoutManager = GridLayoutManager(this, 2)
+        // binding.recipeRecyclerView.layoutManager = GridLayoutManager(this, 2)
+
+        binding.recipeRecyclerView.layoutManager = layoutManager
         binding.recipeRecyclerView.adapter = adapter
 
         binding.addRecipeButton.setOnClickListener {
