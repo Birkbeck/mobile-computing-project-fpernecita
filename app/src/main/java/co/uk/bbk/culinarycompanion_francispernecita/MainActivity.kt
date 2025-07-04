@@ -61,7 +61,9 @@ class MainActivity : AppCompatActivity() {
         viewModel.readAllRecipes()
         viewModel.recipes.observe(this) { recipes ->
             val allCategories = resources.getStringArray(R.array.recipe_categories).toList()
-            val groupedMap = recipes.groupBy { it.category }
+
+            val uniqueRecipes = recipes.distinctBy { it.id }
+            val groupedMap = uniqueRecipes.groupBy { it.category }
 
             val flattenedRecipeList = mutableListOf<RecipeListItem>()
             allCategories.forEach { category ->
