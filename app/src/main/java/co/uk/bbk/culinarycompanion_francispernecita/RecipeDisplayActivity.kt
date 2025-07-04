@@ -35,18 +35,19 @@ class RecipeDisplayActivity : AppCompatActivity() {
             val intent = Intent(this, AddEditActivity::class.java)
             startActivity(intent)
         }
-
-        val imageRes = when (recipe.category.lowercase()) {
-            "breakfast" -> R.drawable.category_breakfast
-            "brunch" -> R.drawable.category_brunch
-            "lunch" -> R.drawable.category_lunch
-            "dinner" -> R.drawable.category_dinner
-            "desserts" -> R.drawable.category_desserts
-            "other" -> R.drawable.category_other
-            else -> R.drawable.category_image_placeholder
-        }
-        binding.categoryImageView.setImageResource(imageRes)
     }
+// not going to be included as images will cause confusion
+//        val imageRes = when (recipe.category.lowercase()) {
+//            "breakfast" -> R.drawable.category_breakfast
+//            "brunch" -> R.drawable.category_brunch
+//            "lunch" -> R.drawable.category_lunch
+//            "dinner" -> R.drawable.category_dinner
+//            "desserts" -> R.drawable.category_desserts
+//            "other" -> R.drawable.category_other
+//            else -> R.drawable.category_image_placeholder
+//        }
+//        binding.categoryImageView.setImageResource(imageRes)
+//    }
 
     override fun onResume() {
         super.onResume()
@@ -106,7 +107,6 @@ class RecipeDisplayActivity : AppCompatActivity() {
         dialog.show()
     }
 
-
     private fun bindRecipeDetails() {
         binding.recipe = recipe
 //        binding.recipeTitleTextView.text = recipe.title
@@ -115,6 +115,4 @@ class RecipeDisplayActivity : AppCompatActivity() {
 //        binding.ingredientsTextView.text = recipe.ingredients
 //        binding.instructionsTextView.text = recipe.instructions
     }
-
-
 }
