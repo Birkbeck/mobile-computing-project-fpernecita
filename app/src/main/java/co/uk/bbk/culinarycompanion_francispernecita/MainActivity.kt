@@ -57,31 +57,18 @@ class MainActivity : AppCompatActivity() {
         val dao = RecipesDatabase.getDatabase(applicationContext).recipesDao()
         viewModel.recipesDao = dao
 
-//        // dummy test data
-//        viewModel.addRecipe(
-//            title = "Test Pancakes",
-//            category = "Breakfast",
-//            description = "Delicious fluffy pancakes with syrup",
-//            ingredients = "Flour, Eggs, Milk, Butter",
-//            instructions = "1. Mix all ingredients\n2. Cook on pan until golden\n3. Serve with syrup"
-//        )
-
         // trigger readAllRecipes()
         viewModel.readAllRecipes()
         viewModel.recipes.observe(this) { recipes ->
             val allCategories = resources.getStringArray(R.array.recipe_categories).toList()
             val groupedMap = recipes.groupBy { it.category }
 
-//             val groupedRecipes = RecipeViewModel.groupRecipesByCategory(recipes)
-//            val flattenedRecipeList = groupedRecipes.flatMap { categoryGroup ->
-//                listOf(RecipeListItem.CategoryHeader(categoryGroup.category)) +
-//                categoryGroup.recipes.map { RecipeListItem.RecipeItem(it) }
-//            }
             val flattenedRecipeList = mutableListOf<RecipeListItem>()
             allCategories.forEach { category ->
                 flattenedRecipeList.add(RecipeListItem.CategoryHeader(category))
 
                 val recipesInCategory = groupedMap[category] ?: emptyList()
+                Log.d("MainActivity", "Category: $category → ${recipesInCategory.size} items")
                 recipesInCategory.forEach { recipe ->
                     flattenedRecipeList.add(RecipeListItem.RecipeItem(recipe))
                 }
