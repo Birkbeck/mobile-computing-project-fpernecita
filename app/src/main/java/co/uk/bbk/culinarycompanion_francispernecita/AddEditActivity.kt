@@ -65,6 +65,10 @@ class AddEditActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.add_edit_menu, menu)
+        // hide the delete button if ADDING a new recipe
+        if (editingRecipe == null) {
+            menu.findItem(R.id.action_delete).isVisible = false
+        }
         return true
     }
 
