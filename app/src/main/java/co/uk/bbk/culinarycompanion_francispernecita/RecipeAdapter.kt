@@ -60,7 +60,7 @@ class RecipeAdapter(
                 else -> R.drawable.category_image_placeholder
             }
 
-
+            binding.categoryImageView.setImageResource(imageRes)
             binding.executePendingBindings()
         }
     }
