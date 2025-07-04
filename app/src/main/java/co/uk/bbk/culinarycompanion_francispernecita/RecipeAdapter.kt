@@ -11,8 +11,8 @@ class RecipeAdapter(
 ) : androidx.recyclerview.widget.ListAdapter<RecipeListItem, RecyclerView.ViewHolder>(RecipeItemDiffCallback()) {
 
     companion object {
-        private const val VIEW_TYPE_HEADER = 0
-        private const val VIEW_TYPE_ITEM = 1
+        const val VIEW_TYPE_HEADER = 0
+        const val VIEW_TYPE_ITEM = 1
     }
 
     override fun getItemViewType(position: Int): Int {
@@ -48,6 +48,13 @@ class RecipeAdapter(
             RecyclerView.ViewHolder(binding.root) {
         fun bind(category: String) {
             binding.category = category
+
+            // Set the image resource based on the category
+            val imageRes = when (category.lowercase()) {
+                else -> R.drawable.category_image_placeholder
+            }
+
+
             binding.executePendingBindings()
         }
     }
