@@ -8,7 +8,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginBottom="12dp">
+        android:layout_marginTop="12dp">
 
         <ImageView
             android:id="@+id/categoryImageView"
@@ -16,15 +16,12 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:contentDescription="@{category}"
-            android:src="@drawable/category_image_placeholder"
-            />
+            android:src="@drawable/category_image_placeholder" />
 
         <View
             android:id="@+id/categoryBackgroundV"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/light_grey"/>
-
+            android:layout_height="match_parent"/>
 
         <TextView
             android:id="@+id/categoryTitleTextView"
@@ -32,11 +29,11 @@
             android:layout_height="wrap_content"
             android:text="@{category}"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:padding="12dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:layout_gravity="bottom"/>
     </FrameLayout>
 </layout>
