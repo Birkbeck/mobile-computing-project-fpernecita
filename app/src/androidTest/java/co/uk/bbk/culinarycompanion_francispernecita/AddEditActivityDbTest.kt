@@ -43,5 +43,13 @@ class AddEditActivityDbTest {
 
     @Test
     fun testInsertAndGetRecipe() {
+        // Create a new recipe
+        val recipe = Recipe(
+            title = "Test Recipe",
+            category = "Test Category",
+            description = "Test Description",
+            ingredients = "Test Ingredients",
+            instructions = "Test Instructions"
+        )
     }
 }
