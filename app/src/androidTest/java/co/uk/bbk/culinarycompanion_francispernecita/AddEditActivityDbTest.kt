@@ -42,7 +42,7 @@ class AddEditActivityDbTest {
     }
 
     @Test
-    fun testInsertAndGetRecipe() {
+    fun testInsertAndGetRecipe() = runBlocking {
 
         val scenario = ActivityScenario.launch(AddEditActivity::class.java)
         scenario.onActivity { activity ->
