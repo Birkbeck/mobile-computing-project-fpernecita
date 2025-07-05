@@ -34,4 +34,7 @@ class MainActivityViewModelTest {
     fun teardown() {
         db.close()
     }
+
+    @Test
+    fun testAddRecipeThroughViewModel() = runBlocking {}
 }
