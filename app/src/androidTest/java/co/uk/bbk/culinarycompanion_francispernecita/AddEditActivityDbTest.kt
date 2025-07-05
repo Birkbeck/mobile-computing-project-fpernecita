@@ -46,6 +46,8 @@ class AddEditActivityDbTest {
 
         val scenario = ActivityScenario.launch(AddEditActivity::class.java)
         scenario.onActivity { activity ->
+            val viewModel = ViewModelProvider(activity).get(RecipeViewModel::class.java)
+            viewModel.recipesDao = dao
         // Create a new recipe
         val recipe = Recipe(
             title = "Test Recipe",
