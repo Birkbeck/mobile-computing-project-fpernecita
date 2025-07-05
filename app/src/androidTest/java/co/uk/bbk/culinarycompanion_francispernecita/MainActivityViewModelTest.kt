@@ -51,5 +51,8 @@ class MainActivityViewModelTest {
             )
         }
         delay(200)
+
+        val recipe = dao.getAllRecipes()
+        assertTrue(recipe.any { it.title == "Sinigang" })
     }
 }
