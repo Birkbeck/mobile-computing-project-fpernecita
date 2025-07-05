@@ -40,4 +40,8 @@ class AddEditActivityDbTest {
     fun teardown() {
         db.close()
     }
+
+    @Test
+    fun testInsertAndGetRecipe() {
+    }
 }
