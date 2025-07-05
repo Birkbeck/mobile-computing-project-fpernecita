@@ -56,6 +56,9 @@ class AddEditActivityDbTest {
                 instructions = "Boil and simmer"
             )
         }
+        // Wait for the recipe to be inserted
+        delay(200)
+
         val recipe = dao.getAllRecipes()
         assertTrue(recipe.any { it.title == "Sinigang" })
     }
