@@ -24,4 +24,13 @@ import co.uk.bbk.culinarycompanion_francispernecita.RecipesDatabase
 class AddEditActivityDbTest {
     private lateinit var db: RecipesDatabase
     private lateinit var dao: RecipesDao
+
+    @Before
+    fun setup() {
+        // Create an in-memory Room database for testing
+        db = Room.inMemoryDatabaseBuilder(context, RecipesDatabase::class.java)
+            .allowMainThreadQueries()
+            .build()
+        dao = db.recipesDao()
+    }
 }
