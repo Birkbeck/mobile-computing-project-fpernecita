@@ -22,5 +22,6 @@ import co.uk.bbk.culinarycompanion_francispernecita.RecipesDatabase
 
 @RunWith(AndroidJUnit4::class)
 class AddEditActivityDbTest {
-
+    private lateinit var db: RecipesDatabase
+    private lateinit var dao: RecipesDao
 }
