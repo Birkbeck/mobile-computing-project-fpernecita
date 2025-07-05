@@ -29,4 +29,9 @@ class MainActivityViewModelTest {
             .build()
         dao = db.recipesDao()
     }
+
+    @After
+    fun teardown() {
+        db.close()
+    }
 }
