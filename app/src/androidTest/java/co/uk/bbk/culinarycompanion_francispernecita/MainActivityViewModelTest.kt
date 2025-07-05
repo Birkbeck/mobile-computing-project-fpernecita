@@ -36,5 +36,11 @@ class MainActivityViewModelTest {
     }
 
     @Test
-    fun testAddRecipeThroughViewModel() = runBlocking {}
+    fun testAddRecipeThroughViewModel() = runBlocking {
+        val scenario = ActivityScenario.launch(MainActivity::class.java)
+        scenario.onActivity { activity ->
+            val viewModel = ViewModelProvider(activity).get(RecipeViewModel::class.java)
+            viewModel.recipesDao = dao
+
+    }
 }
