@@ -42,5 +42,13 @@ class MainActivityViewModelTest {
             val viewModel = ViewModelProvider(activity).get(RecipeViewModel::class.java)
             viewModel.recipesDao = dao
 
+            viewModel.addRecipe(
+                title = "Sinigang",
+                category = "Soup",
+                description = "Tamarind-based stew",
+                ingredients = "Pork, vegetables, tamarind",
+                instructions = "Boil and simmer"
+            )
+        }
     }
 }
