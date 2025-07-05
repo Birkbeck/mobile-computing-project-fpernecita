@@ -20,7 +20,7 @@ import co.uk.bbk.culinarycompanion_francispernecita.Recipe
 import co.uk.bbk.culinarycompanion_francispernecita.RecipesDao
 import co.uk.bbk.culinarycompanion_francispernecita.RecipesDatabase
 
-
+@RunWith(AndroidJUnit4::class)
 class AddEditActivityDbTest {
 
 }
