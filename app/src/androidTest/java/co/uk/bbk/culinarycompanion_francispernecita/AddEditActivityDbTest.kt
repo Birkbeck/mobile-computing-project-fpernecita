@@ -49,12 +49,12 @@ class AddEditActivityDbTest {
             val viewModel = ViewModelProvider(activity).get(RecipeViewModel::class.java)
             viewModel.recipesDao = dao
         // Create a new recipe
-        val recipe = Recipe(
-            title = "Test Recipe",
-            category = "Test Category",
-            description = "Test Description",
-            ingredients = "Test Ingredients",
-            instructions = "Test Instructions"
-        )
+            viewModel.addRecipe(
+                title = "Sinigang",
+                category = "Soup",
+                description = "Tamarind-based stew",
+                ingredients = "Pork, vegetables, tamarind",
+                instructions = "Boil and simmer"
+            )
     }
 }
