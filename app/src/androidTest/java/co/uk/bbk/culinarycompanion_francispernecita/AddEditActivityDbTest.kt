@@ -45,6 +45,7 @@ class AddEditActivityDbTest {
     fun testInsertAndGetRecipe() {
 
         val scenario = ActivityScenario.launch(AddEditActivity::class.java)
+        scenario.onActivity { activity ->
         // Create a new recipe
         val recipe = Recipe(
             title = "Test Recipe",
