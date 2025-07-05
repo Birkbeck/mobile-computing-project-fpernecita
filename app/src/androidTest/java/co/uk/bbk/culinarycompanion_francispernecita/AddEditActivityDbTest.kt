@@ -40,10 +40,9 @@ class AddEditActivityDbTest {
     fun teardown() {
         db.close()
     }
-
+    // Test the insertion of a new recipe into the database
     @Test
     fun testInsertAndGetRecipe() = runBlocking {
-
         val scenario = ActivityScenario.launch(AddEditActivity::class.java)
         scenario.onActivity { activity ->
             val viewModel = ViewModelProvider(activity).get(RecipeViewModel::class.java)
