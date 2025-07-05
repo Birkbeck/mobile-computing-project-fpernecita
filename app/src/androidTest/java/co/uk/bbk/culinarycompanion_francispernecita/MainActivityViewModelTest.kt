@@ -18,5 +18,6 @@ import androidx.room.Room
 
 @RunWith(AndroidJUnit4::class)
 class MainActivityViewModelTest {
-
+    private lateinit var db: RecipesDatabase
+    private lateinit var dao: RecipesDao
 }
