@@ -35,4 +35,9 @@ class AddEditActivityDbTest {
             .build()
         dao = db.recipesDao()
     }
+
+    @After
+    fun teardown() {
+        db.close()
+    }
 }
