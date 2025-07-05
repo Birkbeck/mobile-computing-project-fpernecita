@@ -19,7 +19,8 @@
         android:fitsSystemWindows="true"
         android:padding="16dp"
         tools:context=".RecipeDisplayActivity">
-    <!--    tools:context=".MainActivity">-->
+
+<!--  Current layout is not scrollable, will require RecylcerView and Adapter -->
         <LinearLayout
             android:id="@+id/recipeDetailsLayout"
             android:layout_width="match_parent"
