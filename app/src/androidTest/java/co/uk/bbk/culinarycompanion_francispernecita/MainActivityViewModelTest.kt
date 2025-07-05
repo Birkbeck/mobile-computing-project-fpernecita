@@ -20,4 +20,13 @@ import androidx.room.Room
 class MainActivityViewModelTest {
     private lateinit var db: RecipesDatabase
     private lateinit var dao: RecipesDao
+    // setup the database before each test
+    @Before
+    fun setup() {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        db = Room.inMemoryDatabaseBuilder(context, RecipesDatabase::class.java)
+            .allowMainThreadQueries()
+            .build()
+        dao = db.recipesDao()
+    }
 }
