@@ -16,6 +16,7 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.delay
 import androidx.room.Room
 
+@RunWith(AndroidJUnit4::class)
 class MainActivityViewModelTest {
 
 }
