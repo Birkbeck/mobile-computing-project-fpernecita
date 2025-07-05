@@ -48,7 +48,7 @@ class AddEditActivityDbTest {
         scenario.onActivity { activity ->
             val viewModel = ViewModelProvider(activity).get(RecipeViewModel::class.java)
             viewModel.recipesDao = dao
-        // Create a new recipe
+            // Create a new recipe
             viewModel.addRecipe(
                 title = "Sinigang",
                 category = "Soup",
@@ -56,5 +56,8 @@ class AddEditActivityDbTest {
                 ingredients = "Pork, vegetables, tamarind",
                 instructions = "Boil and simmer"
             )
+        }
+        val recipe = dao.getAllRecipes()
+        assertTrue(recipe.any { it.title == "Sinigang" })
     }
 }
