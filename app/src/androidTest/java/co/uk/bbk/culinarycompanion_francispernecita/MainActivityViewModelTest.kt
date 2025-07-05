@@ -50,5 +50,6 @@ class MainActivityViewModelTest {
                 instructions = "Boil and simmer"
             )
         }
+        delay(200)
     }
 }
