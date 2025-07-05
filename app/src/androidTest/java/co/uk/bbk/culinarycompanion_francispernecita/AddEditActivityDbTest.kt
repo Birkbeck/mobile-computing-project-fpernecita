@@ -27,6 +27,8 @@ class AddEditActivityDbTest {
 
     @Before
     fun setup() {
+        // Initialize the Room database and DAO before each test
+        val context = ApplicationProvider.getApplicationContext<Context>()
         // Create an in-memory Room database for testing
         db = Room.inMemoryDatabaseBuilder(context, RecipesDatabase::class.java)
             .allowMainThreadQueries()
