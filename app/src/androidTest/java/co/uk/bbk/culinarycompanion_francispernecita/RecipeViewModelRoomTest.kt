@@ -16,6 +16,11 @@ import kotlinx.coroutines.test.setMain
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 
+import co.uk.bbk.culinarycompanion_francispernecita.Recipe
+import co.uk.bbk.culinarycompanion_francispernecita.RecipesDao
+import co.uk.bbk.culinarycompanion_francispernecita.RecipesDatabase
+import co.uk.bbk.culinarycompanion_francispernecita.RecipeViewModel
+
 // JUnit
 import org.junit.*
 import org.junit.runner.RunWith
