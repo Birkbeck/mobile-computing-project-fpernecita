@@ -52,6 +52,9 @@ class MainActivity : AppCompatActivity() {
         val dao = RecipesDatabase.getDatabase(applicationContext).recipesDao()
         viewModel.recipesDao = dao
 
+        // insert sample recipes if the database is empty
+        viewModel.insertSampleRecipes()
+
         // fetch the recipes from the database
         viewModel.readAllRecipes()
         // observe the recipes list and update the adapter when it changes
