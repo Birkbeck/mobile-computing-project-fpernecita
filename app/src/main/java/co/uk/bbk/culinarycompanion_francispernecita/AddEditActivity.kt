@@ -15,9 +15,12 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 
 class AddEditActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityAddEditBinding
-    private val viewModel: RecipeViewModel by viewModels()
 
+    // view binding for accessing views in the layout
+    private lateinit var binding: ActivityAddEditBinding
+    // view model for managing data
+    private val viewModel: RecipeViewModel by viewModels()
+    // hold reference to the recipe being edited
     private var editingRecipe: Recipe? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
