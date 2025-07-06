@@ -73,4 +73,26 @@ class RecipeViewModel: ViewModel() {
     fun observeRecipeById(recipeId: Long): LiveData<Recipe>? {
         return recipesDao?.observeRecipeById(recipeId)
     }
+
+    // sample insert recipe function
+    fun insertSampleRecipes() {
+        viewModelScope.launch {
+            recipesDao?.let { dao ->
+                val sampleRecipes = listOf(
+                    Recipe(title = "Pancakes", category = "Breakfast", description = "Fluffy and golden", ingredients = "Flour, Milk, Eggs", instructions = "Mix, cook, serve."),
+                    Recipe(title = "Avocado Toast", category = "Brunch", description = "Healthy and simple", ingredients = "Bread, Avocado, Salt", instructions = "Toast, mash, season."),
+                    Recipe(title = "Grilled Cheese", category = "Lunch", description = "Cheesy and toasty", ingredients = "Bread, Cheese, Butter", instructions = "Grill until golden."),
+                    Recipe(title = "Spaghetti Bolognese", category = "Dinner", description = "Hearty Italian classic", ingredients = "Pasta, Beef, Tomato Sauce", instructions = "Cook pasta, simmer sauce."),
+                    Recipe(title = "Chocolate Cake", category = "Desserts", description = "Rich and moist", ingredients = "Flour, Cocoa, Sugar, Eggs", instructions = "Mix and bake."),
+                    Recipe(title = "Fruit Salad", category = "Other", description = "Light and fresh", ingredients = "Mixed fruits, Mint", instructions = "Chop and mix.")
+                )
+                dao.getAllRecipes().let {
+                    if (it.isEmpty()) {
+                        sampleRecipes.forEach { recipe -> dao.insertRecipe(recipe) }
+                        readAllRecipes()
+                    }
+                }
+            }
+        }
+    }
 }
