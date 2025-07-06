@@ -26,6 +26,9 @@ import org.junit.*
 import org.junit.runner.RunWith
 import org.junit.Assert.assertEquals
 
+import java.util.concurrent.CountDownLatch
+import java.util.concurrent.TimeUnit
+
 class RecipeViewModelRoomTest {
 
 }
