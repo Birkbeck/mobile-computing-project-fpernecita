@@ -60,4 +60,7 @@ class RecipeViewModelRoomTest {
         db.close()
         Dispatchers.resetMain()
     }
+
+    @Test
+    fun testDatabaseInsertsAndUpdatesLiveData()
 }
