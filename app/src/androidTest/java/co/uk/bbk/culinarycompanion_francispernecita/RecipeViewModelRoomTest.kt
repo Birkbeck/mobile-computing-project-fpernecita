@@ -44,6 +44,12 @@ class RecipeViewModelRoomTest {
 
     @Before
     fun setup() {
+        // Initialize the Room database and DAO before each test
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        db = Room.inMemoryDatabaseBuilder(context, RecipesDatabase::class.java)
+            .allowMainThreadQueries()
+            .build()
+        dao = db.recipesDao()
 
     }
 }
