@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 flattenedRecipeList.add(RecipeListItem.CategoryHeader(category))
 
                 val recipesInCategory = groupedMap[category] ?: emptyList()
-                Log.d("MainActivity", "Category: $category → ${recipesInCategory.size} items")
+                // Log.d("MainActivity", "Category: $category → ${recipesInCategory.size} items")
                 recipesInCategory.forEach { recipe ->
                     flattenedRecipeList.add(RecipeListItem.RecipeItem(recipe))
                 }
@@ -79,10 +79,10 @@ class MainActivity : AppCompatActivity() {
             adapter.submitList(null)
             // Submit the new list to the adapter
             adapter.submitList(flattenedRecipeList)
-            Log.d("MainActivity", "Recipes received: $recipes")
+            // Log.d("MainActivity", "Recipes received: $recipes")
         }
     }
-
+    // reload the recipes list when the activity is resumed
     override fun onResume() {
         super.onResume()
         viewModel.readAllRecipes()
