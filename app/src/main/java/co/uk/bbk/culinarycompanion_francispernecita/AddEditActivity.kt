@@ -28,14 +28,14 @@ class AddEditActivity : AppCompatActivity() {
         binding = ActivityAddEditBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Setup categories for spinner
+        // Setup categories for spinner using string array resource
         val categories = resources.getStringArray(R.array.recipe_categories).toList()
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, categories)
         binding.categorySpinner.adapter = spinnerAdapter
 
-        // get DAO
+        // assign the dao to the view model
         viewModel.recipesDao = RecipesDatabase.getDatabase(applicationContext).recipesDao()
-
+        // enable back button in action bar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // Check if recipe is an existing one
