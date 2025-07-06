@@ -62,7 +62,7 @@ class RecipeViewModelRoomTest {
     }
 
     @Test
-    fun testDatabaseInsertsAndUpdatesLiveData() = run test {
+    fun testDatabaseInsertsAndUpdatesLiveData() = runTest {
         viewModel.addRecipe(
             title = "Tinola",
             category = "Soup",
