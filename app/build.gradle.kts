@@ -60,13 +60,13 @@ dependencies {
     implementation(libs.androidx.room.ktx)
 
     testImplementation(libs.androidx.core.testing)
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    testImplementation(libs.jetbrains.kotlinx.coroutines.test)
 
     // android test dependencies
     androidTestImplementation(libs.androidx.core.testing)
     androidTestImplementation(libs.jetbrains.kotlinx.coroutines.test)
     androidTestImplementation(libs.junit)
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.core)
     androidTestImplementation(libs.androidx.runner)
 
