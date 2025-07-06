@@ -71,6 +71,8 @@ class RecipeViewModelRoomTest {
             instructions = "Boil and simmer"
     }
 
+    val result = viewModel.recipes.getOrAwaitValue()
+
     assertEquals(1, result.size)
     assertEquals("Tinola", result[0].title)
 }
