@@ -70,6 +70,9 @@ class RecipeViewModelRoomTest {
             ingredients = "Chicken, ginger, green papaya",
             instructions = "Boil and simmer"
         )
+        //
+        testDispatcher.scheduler.advanceUntilIdle()
+
         // wait for the LiveData to update
         val result = viewModel.recipes.getOrAwaitValue()
 
