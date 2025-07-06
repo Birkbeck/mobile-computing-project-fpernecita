@@ -39,4 +39,6 @@ class RecipeViewModelRoomTest {
     private lateinit var db: RecipesDatabase
     private lateinit var dao: RecipesDao
     private lateinit var viewModel: RecipeViewModel
+
+    private val testDispatcher = StandardTestDispatcher()
 }
