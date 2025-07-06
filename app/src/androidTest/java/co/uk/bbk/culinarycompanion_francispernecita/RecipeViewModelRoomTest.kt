@@ -32,7 +32,7 @@ import java.util.concurrent.TimeUnit
 @RunWith(AndroidJUnit4::class)
 @OptIn(ExperimentalCoroutinesApi::class)
 class RecipeViewModelRoomTest {
-
+    //
     @get:Rule
     val instantExecutorRule = InstantTaskExecutorRule()
 
@@ -44,6 +44,7 @@ class RecipeViewModelRoomTest {
 
     @Before
     fun setup() {
+        Dispatchers.setMain(testDispatcher)
         // Initialize the Room database and DAO before each test
         val context = ApplicationProvider.getApplicationContext<Context>()
         db = Room.inMemoryDatabaseBuilder(context, RecipesDatabase::class.java)
