@@ -63,6 +63,11 @@ class RecipeViewModelRoomTest {
 
     @Test
     fun testDatabaseInsertsAndUpdatesLiveData() = run test {
-
+        viewModel.addRecipe(
+            title = "Tinola",
+            category = "Soup",
+            description = "Ginger chicken broth",
+            ingredients = "Chicken, ginger, green papaya",
+            instructions = "Boil and simmer"
     }
 }
