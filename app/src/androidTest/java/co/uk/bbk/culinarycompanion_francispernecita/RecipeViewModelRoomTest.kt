@@ -53,7 +53,11 @@ class RecipeViewModelRoomTest {
         dao = db.recipesDao()
         viewModel = RecipeViewModel()
         viewModel.recipesDao = dao
+    }
 
-
+    @After
+    fun teardown() {
+        db.close()
+        Dispatchers.resetMain()
     }
 }
