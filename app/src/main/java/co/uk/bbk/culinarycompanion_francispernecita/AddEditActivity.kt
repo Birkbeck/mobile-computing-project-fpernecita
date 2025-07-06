@@ -60,12 +60,12 @@ class AddEditActivity : AppCompatActivity() {
             }
         }
     }
-
+    // handle back button press
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
     }
-
+    // inflate the menu for the action bar
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.add_edit_menu, menu)
         // hide the delete button if ADDING a new recipe
@@ -74,7 +74,7 @@ class AddEditActivity : AppCompatActivity() {
         }
         return true
     }
-
+    // handle menu item selection
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_save -> {
@@ -94,7 +94,7 @@ class AddEditActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-
+    // show the delete dialog before deleting the recipe
     private fun showDeleteDialog() {
         val dialogBinding = DialogConfirmDeleteBinding.inflate(layoutInflater)
         val dialog = AlertDialog.Builder(this)
@@ -114,7 +114,7 @@ class AddEditActivity : AppCompatActivity() {
         }
         dialog.show()
     }
-
+    // validate and save/ update the recipe
     private fun performSaveAction() {
         val title = binding.recipeTitleEditText.text.toString()
         val category = binding.categorySpinner.selectedItem.toString()
@@ -129,6 +129,7 @@ class AddEditActivity : AppCompatActivity() {
 
         val dao = viewModel.recipesDao
         if (editingRecipe == null) {
+            // Create a new recipe
             val newRecipe = Recipe(
                 title = title,
                 category = category,
@@ -139,6 +140,7 @@ class AddEditActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 val recipeId = dao?.insertRecipe(newRecipe)
                 if (recipeId != null && recipeId != -1L) {
+                    // Fetch the inserted recipe
                     val insertedRecipe = dao.getRecipeById(recipeId)
                     if (insertedRecipe != null) {
                         val intent = Intent(this@AddEditActivity, RecipeDisplayActivity::class.java)
@@ -146,10 +148,10 @@ class AddEditActivity : AppCompatActivity() {
                         startActivity(intent)
                     }
                 }
-
                 finish()
             }
         } else {
+            // Update the existing recipe
             val updatedRecipe = editingRecipe!!.copy(
                 title = title,
                 category = category,
