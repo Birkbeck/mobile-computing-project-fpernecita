@@ -16,6 +16,11 @@ import kotlinx.coroutines.test.setMain
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 
+// JUnit
+import org.junit.*
+import org.junit.runner.RunWith
+import org.junit.Assert.assertEquals
+
 class RecipeViewModelRoomTest {
 
 }
