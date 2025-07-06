@@ -45,7 +45,7 @@ class AddEditActivityDbTest {
     fun testInsertAndRetrieveRecipe() = runBlocking {
         val scenario = ActivityScenario.launch(AddEditActivity::class.java)
         scenario.onActivity { activity ->
-            val viewModel = ViewModelProvider(activity).get(RecipeViewModel::class.java)
+            val viewModel = ViewModelProvider(activity)[RecipeViewModel::class.java]
             viewModel.recipesDao = dao
             // Create a new recipe
             viewModel.addRecipe(
