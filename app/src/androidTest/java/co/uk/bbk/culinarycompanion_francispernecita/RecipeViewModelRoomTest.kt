@@ -76,4 +76,20 @@ class RecipeViewModelRoomTest {
         assertEquals(1, result.size)
         assertEquals("Tinola", result[0].title)
     }
+    // Helper for LiveData testing - source: https://gist.github.com/JoseAlcerreca/35828c25fca123c8a115d6251cf3f45b
+    private fun <T> LiveData<T>.getOrAwaitValue(): T {
+        var data: T? = null
+        val latch = CountDownLatch(1)
+
+        val observer = object : Observer<T> {
+            override fun onChanged(value: T) {
+                data = value
+                latch.countDown()
+                this@getOrAwaitValue.removeObserver(this)
+            }
+        }
+        this.observeForever(observer)
+        latch.await(2, TimeUnit.SECONDS)
+        return data ?: throw NullPointerException("LiveData value was null")
+    }
 }
