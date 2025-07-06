@@ -32,5 +32,7 @@ import java.util.concurrent.TimeUnit
 @RunWith(AndroidJUnit4::class)
 @OptIn(ExperimentalCoroutinesApi::class)
 class RecipeViewModelRoomTest {
-
+    private lateinit var db: RecipesDatabase
+    private lateinit var dao: RecipesDao
+    private lateinit var viewModel: RecipeViewModel
 }
