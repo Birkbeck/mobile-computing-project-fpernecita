@@ -24,21 +24,22 @@ class RecipeDisplayActivity : AppCompatActivity() {
         // up button to go back to the main activity
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Recipe Details"
-
+        // Retrieve recipe object from intent; close activity if not found
         recipe = intent.getSerializableExtra("recipe", Recipe::class.java) ?: return finish()
-
+        // Attach DAO to ViewModel for data operations
         viewModel.recipesDao = RecipesDatabase.getDatabase(applicationContext).recipesDao()
-
+        // Display recipe content in the UI
         bindRecipeDetails()
-
+        // Set up floating action button to add a new recipe
         binding.addRecipeButton.setOnClickListener {
             val intent = Intent(this, AddEditActivity::class.java)
             startActivity(intent)
         }
     }
-
+    // Update recipe details if the user returns from editing or other activities
     override fun onResume() {
         super.onResume()
+        // Observe changes to the recipe and update UI when it changes
         viewModel.observeRecipeById(recipe.id.toLong())?.observe(this) { updatedRecipe ->
             if (updatedRecipe != null) {
                 recipe = updatedRecipe
@@ -46,7 +47,7 @@ class RecipeDisplayActivity : AppCompatActivity() {
             }
         }
     }
-
+    // back button action bar
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
@@ -94,7 +95,7 @@ class RecipeDisplayActivity : AppCompatActivity() {
         }
         dialog.show()
     }
-
+    // Populate the UI with the current recipe's details
     private fun bindRecipeDetails() {
         binding.recipe = recipe
   }
