@@ -57,7 +57,6 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.1")
-    // annotationProcessor("androidx.room:room-compiler:2.6.1")
     implementation(libs.androidx.room.ktx)
 
     testImplementation("androidx.arch.core:core-testing:2.2.0")
