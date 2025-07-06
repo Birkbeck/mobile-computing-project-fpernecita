@@ -105,6 +105,11 @@ class AddEditActivity : AppCompatActivity() {
             editingRecipe?.let {
                 viewModel.deleteRecipe(it)
                 dialog.dismiss()
+
+                // navigate back to the main activity
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+
                 finish()
             }
         }
