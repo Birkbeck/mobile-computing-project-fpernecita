@@ -41,4 +41,9 @@ class RecipeViewModelRoomTest {
     private lateinit var viewModel: RecipeViewModel
 
     private val testDispatcher = StandardTestDispatcher()
+
+    @Before
+    fun setup() {
+
+    }
 }
