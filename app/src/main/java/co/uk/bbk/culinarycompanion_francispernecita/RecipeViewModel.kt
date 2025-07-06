@@ -14,7 +14,7 @@ class RecipeViewModel: ViewModel() {
     val recipes: LiveData<List<Recipe>> = _recipes
     // DAO for database operations needs initalisation
     var recipesDao: RecipesDao? = null
-    // Read all recipes from the database - used a template from the week 8 lecture
+    // Fetch all recipes from the database - used a template from the week 8 lecture
     fun readAllRecipes() {
         viewModelScope.launch {
             recipesDao?.let {
@@ -26,7 +26,7 @@ class RecipeViewModel: ViewModel() {
             }
         }
     }
-    // Add a new recipe to the database
+    // Insert a new recipe to the database using parameters from the UI and refresh the list
     fun addRecipe(title: String, category: String, description: String, ingredients: String, instructions: String) {
         viewModelScope.launch {
             recipesDao?.let {
@@ -69,7 +69,7 @@ class RecipeViewModel: ViewModel() {
             }
         }
     }
-
+    // Get a specific recipe by its ID
     fun observeRecipeById(recipeId: Long): LiveData<Recipe>? {
         return recipesDao?.observeRecipeById(recipeId)
     }
