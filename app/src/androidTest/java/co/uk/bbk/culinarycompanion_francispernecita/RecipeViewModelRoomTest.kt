@@ -62,5 +62,7 @@ class RecipeViewModelRoomTest {
     }
 
     @Test
-    fun testDatabaseInsertsAndUpdatesLiveData()
+    fun testDatabaseInsertsAndUpdatesLiveData() = run test {
+
+    }
 }
