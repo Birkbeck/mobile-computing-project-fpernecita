@@ -8,9 +8,11 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 class RecipeViewModel: ViewModel() {
+    // LiveData for the list of recipes, mutable version only exposed to the ViewModel
     private val _recipes = MutableLiveData(listOf<Recipe>())
+    // Expose read-only version of the LiveData
     val recipes: LiveData<List<Recipe>> = _recipes
-
+    // DAO for database operations needs initalisation
     var recipesDao: RecipesDao? = null
     // Read all recipes from the database - used a template from the week 8 lecture
     fun readAllRecipes() {
@@ -76,15 +78,5 @@ class RecipeViewModel: ViewModel() {
         val category: String,
         val recipes: List<Recipe>
     )
-//    // Group recipes by category
-//    companion object {
-//        fun groupRecipesByCategory(recipes: List<Recipe>): List<RecipeCategory> {
-//            return recipes
-//                .groupBy { it.category }
-//                .map { (category, recipesInCategory) ->
-//                    RecipeCategory(category, recipesInCategory)
-//                }
-//                .sortedBy { it.category }
-//        }
-//    }
+
 }
