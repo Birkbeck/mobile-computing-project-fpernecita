@@ -8,8 +8,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.activity.viewModels
 import co.uk.bbk.culinarycompanion_francispernecita.databinding.ActivityMainBinding
 
-
-
 class MainActivity : AppCompatActivity() {
     // view binding for ui elements access
     private lateinit var binding: ActivityMainBinding
