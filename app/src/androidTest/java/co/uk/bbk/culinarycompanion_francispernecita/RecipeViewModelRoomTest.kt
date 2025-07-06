@@ -70,4 +70,7 @@ class RecipeViewModelRoomTest {
             ingredients = "Chicken, ginger, green papaya",
             instructions = "Boil and simmer"
     }
+
+    assertEquals(1, result.size)
+    assertEquals("Tinola", result[0].title)
 }
