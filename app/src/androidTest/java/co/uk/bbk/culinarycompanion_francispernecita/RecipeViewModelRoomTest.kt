@@ -51,6 +51,9 @@ class RecipeViewModelRoomTest {
             .allowMainThreadQueries()
             .build()
         dao = db.recipesDao()
+        viewModel = RecipeViewModel()
+        viewModel.recipesDao = dao
+
 
     }
 }
