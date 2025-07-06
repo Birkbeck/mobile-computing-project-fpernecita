@@ -69,10 +69,11 @@ class RecipeViewModelRoomTest {
             description = "Ginger chicken broth",
             ingredients = "Chicken, ginger, green papaya",
             instructions = "Boil and simmer"
-    }
-    // wait for the LiveData to update
-    val result = viewModel.recipes.getOrAwaitValue()
+        )
+        // wait for the LiveData to update
+        val result = viewModel.recipes.getOrAwaitValue()
 
-    assertEquals(1, result.size)
-    assertEquals("Tinola", result[0].title)
+        assertEquals(1, result.size)
+        assertEquals("Tinola", result[0].title)
+    }
 }
