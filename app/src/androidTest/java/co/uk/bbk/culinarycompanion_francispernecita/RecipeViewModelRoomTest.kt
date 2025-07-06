@@ -29,6 +29,8 @@ import org.junit.Assert.assertEquals
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 
+@RunWith(AndroidJUnit4::class)
+@OptIn(ExperimentalCoroutinesApi::class)
 class RecipeViewModelRoomTest {
 
 }
